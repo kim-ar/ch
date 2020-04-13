@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device=width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"
+    />
+    <title>합리적인 도매, 천유닷컴</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+
+    <style>
+      .wishlistbox {
+        padding: 15px 20px;
+        background: #fff;
+      }
+      .wlbox {
+        position: relative;
+        overflow: hidden;
+      }
+      .wlbox-sel {
+        position: absolute;
+        display: block;
+        top: 20px;
+        left: 0;
+      }
+      .wlbox-sel input[type="checkbox"] {
+        padding: 0;
+        margin: 0;
+        width: 0;
+        opacity: 0;
+      }
+      .wlbox-sel label {
+        display: block;
+        width: 18px;
+        height: 18px;
+        line-height: 1.8;
+        background: url(../img/c_check_off.svg) no-repeat left top;
+        background-size: 17px 17px;
+      }
+      .wlbox-sel input[type="checkbox"]:checked + label {
+        background: url(../img/c_check_on2.svg) no-repeat left top;
+        background-size: 17px 17px;
+      }
+
+      .wlbox-thumb {
+        position: absolute;
+        top: 0;
+        left: 17px;
+        width: 80px;
+        height: 80px;
+      }
+      .wlbox-thumb img {
+        width: 100%;
+      }
+      .wlbox-detail {
+        padding-left: 100px;
+        height: 80px;
+      }
+      .wlbox-detail h5 {
+        font-size: 14px;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <header>
+        <div id="hdwrap">
+          <div class="sub-top">
+            <a href="" class="backicon" onclick="history.back()"
+              ><img src="../img/common/back_icon.svg"
+            /></a>
+            <h3 class="">관심상품</h3>
+          </div>
+        </div>
+      </header>
+      <section>
+        <!--상품권 탬-->
+        <div class="page-tab cattop-tab copon-tab">
+          <a onClick="tab_menu(0)" href="#this"
+            ><span class="selected02 tabline">관심상품</span></a
+          >
+          <a onClick="tab_menu(1)" href="#this"><span>관심브랜드</span></a>
+        </div>
+
+        <div class="bg-container">
+          <div class="cart-ntc">
+            <ul>
+              <li>
+                자주 구매하시는 상품이나, 관심있는 상품을 등록해 주시면 쉽고,
+                빠르게 주문하실 수 있습니다.
+              </li>
+              <li>찜리스트에 담긴 상품은 6개월간 보관됩니다.</li>
+              <li>
+                찜한 시점과 실제 주문시점 간의 가격 차이가 발생할 수 있으며
+                판매중단, 일시품절 된 상품은 리스트에서 삭제됩니다.
+              </li>
+            </ul>
+          </div>
+
+          <!---->
+          <div class="page-tab00 wishlistbox">
+            <p class="">전체 <em class="numfontB bfc">22</em></p>
+            <div class="wlbox">
+              <span class="wlbox-sel"
+                ><input type="checkbox" id="wl-sel01"/><label
+                  for="wl-sel01"
+                ></label
+              ></span>
+              <div class="wlbox-thumb">
+                <img src="../img/product/thumb/8.jpg" alt="" />
+              </div>
+              <div class="wlbox-detail">
+                <h5 class="titfont">
+                  <p>라인 프렌즈</p>
+                  라인프렌즈 스트랩보틀삭스세트_샐리(YP3058)
+                </h5>
+                <p>상품번호:<em class="numfontR">27729</em></p>
+                <p>
+                  <span class=""><em class="numfontB">12,500</em>원</span
+                  ><span class=""><em class="numfontB">8,125</em>원</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="page-tab01 wishlistbox" style="display:none;"></div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

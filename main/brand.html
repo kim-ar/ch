@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device=width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"
+    />
+    <title>합리적인 도매, 천유닷컴</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/swiper.min.css" />
+
+    <style>
+    .brd-pagination { bottom:13px !important; }
+    .pmbrdbox { position:relative; overflow:hidden; padding-bottom:30px; background:#fff; }
+    .pmbrdbox ul { padding:20px 0 10px 0; }
+    .pmbrdbox ul li { width:90%; border-radius:5px; overflow:hidden; box-shadow:0 0 6px #ddd; }
+    .pmbrdbox ul li:nth-child(1) { overflow:hidden; background:url(../img/brand/234.jpg) no-repeat top center; background-size:100%; }
+    .pmbrdbox ul li:nth-child(2) { background:url(../img/brand/amos.jpg) no-repeat top center; background-size:100%; }
+    .pmbrdbox ul li:nth-child(3) { background:url(../img/brand/nacoo.jpg) no-repeat top center; background-size:100%; }
+    .pmbrdbox ul li:nth-child(4) { background:url(../img/brand/7321.jpg) no-repeat top center; background-size:100%; }
+    .pmbrdbox ul li:nth-child(5) { background:url(../img/brand/like.jpg) no-repeat top center; background-size:100%; }
+    .pmbrdbox ul li:nth-child(6) { background:url(../img/brand/indigo.jpg) no-repeat top center; background-size:100%; }
+    .pmbrdbox ul li .pmbrd-name { margin:75px 15px 0 15px; position:relative; padding:18px 15px; background:#fff; }
+    .pmbrdbox ul li .pmbrd-name h5 { font-size:18px; }
+    .pmbrdbox ul li .pmbrd-name h5 p { width:65%; font-size:12px; line-height:1.6; padding-top:8px; color:#666; }
+    .pmbrdbox ul li .pmbrd-name .pmbrd-logo { position:absolute; top:6px; right:0; }
+    .pmbrdbox ul li .pmbrd-name .pmbrd-logo img { width:90px; }
+    .pmbrdbox-wrap .pmbrd-sta { overflow:hidden; padding:18px 0 18px 0; background:#fff; }
+    .pmbrdbox-wrap .pmbrd-sta dl { float:left; width:25%; position:relative; }
+    .pmbrdbox-wrap .pmbrd-sta dl:after { position:absolute; width:1px; height:23px; top:8px; right:0; background:#eee; content:""; }
+    .pmbrdbox-wrap .pmbrd-sta dl.last:after { width:0; }
+    .pmbrdbox-wrap .pmbrd-sta dl dt { font-size:12px; padding-left:13px; color:#555; }
+    .pmbrdbox-wrap .pmbrd-sta dl dd { padding-top:5px; padding-left:13px; font-size:15px; letter-spacing:-0.03em; }
+
+    .brd-sch { padding:25px 15px; overflow:hidden; margin-top:10px; background:#fff; }
+    .brd-sch .brd-sch-input { width:100%; overflow:hidden; }
+    .brd-sch .brd-sch-input h5 { font-size:16px; padding:0 0 12px 5px; }
+    .brd-sch .brd-sch-input > span { display:block; }
+    .brd-sch .brd-sort { padding:10px 7px 0 7px; }
+    .brd-sch .brd-sort .brd-sort-box { overflow:hidden; padding:5px 0; position:relative; font-size:14px; }
+    .brd-sch .brd-sort .brd-sort-box:after { position:absolute; top:0; right:0; z-index:999; display:block; width:50px; height:40px; background:linear-gradient(to right,rgba(255,255,255,0) 0,#fff 100%); content:""; pointer-events:none; }
+    .brd-sch .brd-sort .brd-sort-box .brd-sort-lang { display:block; position:absolute; top:7px; left:5px; width:50px; background:url(../img/dot.jpg) no-repeat left center; font-size:15px; }
+    .brd-sort-box .brd-sort-ini { margin-left:60px; position:relative; white-space:nowrap; overflow-x:auto; }
+    .brd-sort-box .brd-sort-ini button { display:inline-block; color:#888; width:22px; height:22px; background:#f5f5f5; border-radius:50%; text-align:center; margin-right:5px; font-size:11px !important; font-weight:bold; }
+    .brdlist { padding:20px; margin-top:10px; background:#fff; overflow:hidden; }
+    .brdlist h5 { font-size:17px; padding-bottom:7px; border-bottom:#e0e0e0 solid 1px; }
+    .brdlist h5 span { margin-left:3px; color:#2c398f; }
+    .brdlist .brdlist-name { padding:0 2px; padding-top:25px; }
+    .brdlist-name p { font-size:14px; text-align:center; padding:20px 0 40px; color:#999; }
+    .brdlist .brdlist-name ul li { float:left; width:50%; margin-bottom:17px; font-size:14px; }
+    .brdlist .brdlist-name ul li span { display:block; width:100%; }
+    .brdlist .brdlist-name ul li .another { padding-top:5px; font-size:11px; color:#999; height:20px; }
+    .brdlist .brdlist-name ul li em { color:#4c64dc; margin-left:5px; font-size:12px; }
+    .qb { width:100%; overflow:hidden; position:relative; padding:5px 0 25px 0; border-top:#f5f5f5 solid 10px; background:#fff; }
+    .qb-list { padding:0 15px; }
+    .qb-list ul { width:100%; overflow:hidden; background:#fff; }/* display:flex; display: -webkit-flex; display:-ms-flexbox; flex-wrap:wrap;*/
+    .qb-list ul li { width:25%; float:left; margin-bottom:1%; }
+    .qb-list ul li a { display:block; width:97%; margin:0 auto; background:#f9f9f9; padding:10px 0; text-align:center; }
+    .qb-list ul li img { width:80%; }
+    .qb-list ul li span { display:block; padding-top:6px; font-size:11px; color:#666; }
+    .cha-brd-list ul li { margin-bottom:15px;}
+    .cha-brd-list ul li a { width:70px; height:70px; overflow:hidden; border-radius:30px; padding:0; border:#f0f0f0 solid 1px; }
+    .cha-brd-list ul li img { width:100%;}
+    .qb .swiper-pagination { bottom:8px; width:100%; text-align:center; }
+    .brd-bot-list { width:100%; overflow:hidden; background:#fff; margin-top:10px; }
+    .etc-brd-tit {font-size: 16px; padding:20px 20px 15px 20px; }
+    .brd-bot-list .qb {padding:0 0 20px 0; border-top:0; }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <header>
+        <div id="hdwrap">
+          <div class="sub-top">
+            <a href="" class="backicon" onclick="history.back()">
+              <img src="../img/common/back_icon.svg"/>
+            </a>
+            <h3 class="">브랜드</h3>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="bg-container">
+          <div class="pmbrd-top">
+            <div class="pmbrdbox">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <div class="pmbrdbox-wrap">
+                    <div class="pmbrd-name">
+                      <h5 class="titfont">
+                        카카오프렌즈
+                        <p class="demi">
+                          라이프스타일을 고스란히 담아내고 겉으로 드러나기 힘든
+                          무
+                        </p>
+                      </h5>
+                      <a href="" class="pmbrd-logo">
+                        <img src="../img/brand/07.jpg"/>
+                      </a>
+                    </div>
+                    <div class="pmbrd-sta">
+                      <dl>
+                        <dt>누적판매</dt>
+                        <dd class="basic">2,152,822</dd>
+                      </dl>
+                      <dl>
+                        <dt>구매업체수</dt>
+                        <dd class="basic">398</dd>
+                      </dl>
+                      <dl>
+                        <dt>판매상품수</dt>
+                        <dd class="basic">120</dd>
+                      </dl>
+                      <dl class="last">
+                        <dt>신상품순</dt>
+                        <dd class="basic">6</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="pmbrdbox-wrap">
+                    <div class="pmbrd-name">
+                      <h5 class="titfont">
+                        AMOS
+                        <p class="demi">
+                          라이프스타일을 고스란히 담아내고 겉으로 드러나기 힘든
+                          무
+                        </p>
+                      </h5>
+                      <a href="" class="pmbrd-logo"><img src="../img/brand/07.jpg"/></a>
+                    </div>
+                    <div class="pmbrd-sta">
+                      <dl>
+                        <dt>누적판매</dt>
+                        <dd class="basic">152,822</dd>
+                      </dl>
+                      <dl>
+                        <dt>구매업체수</dt>
+                        <dd class="basic">398</dd>
+                      </dl>
+                      <dl>
+                        <dt>판매상품수</dt>
+                        <dd class="basic">120</dd>
+                      </dl>
+                      <dl class="last">
+                        <dt>신상품순</dt>
+                        <dd class="basic">6</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="pmbrdbox-wrap">
+                    <div class="pmbrd-name">
+                      <h5 class="titfont">
+                        카카오프렌즈
+                        <p class="demi">
+                          라이프스타일을 고스란히 담아내고 겉으로 드러나기 힘든
+                          무
+                        </p>
+                      </h5>
+                      <a href="" class="pmbrd-logo">
+                        <img src="../img/brand/07.jpg"/>
+                      </a>
+                    </div>
+                    <div class="pmbrd-sta">
+                      <dl>
+                        <dt>누적판매</dt>
+                        <dd class="basic">152,822</dd>
+                      </dl>
+                      <dl>
+                        <dt>구매업체수</dt>
+                        <dd class="basic">398</dd>
+                      </dl>
+                      <dl>
+                        <dt>판매상품수</dt>
+                        <dd class="basic">120</dd>
+                      </dl>
+                      <dl class="last">
+                        <dt>신상품순</dt>
+                        <dd class="basic">6</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="pmbrdbox-wrap">
+                    <div class="pmbrd-name">
+                      <h5 class="titfont">
+                        카카오프렌즈
+                        <p class="demi">
+                          라이프스타일을 고스란히 담아내고 겉으로 드러나기 힘든
+                          무
+                        </p>
+                      </h5>
+                      <a href="" class="pmbrd-logo"
+                        ><img src="../img/brand/07.jpg"
+                      /></a>
+                    </div>
+                    <div class="pmbrd-sta">
+                      <dl>
+                        <dt>누적판매</dt>
+                        <dd class="basic">2,152,822</dd>
+                      </dl>
+                      <dl>
+                        <dt>구매업체수</dt>
+                        <dd class="basic">398</dd>
+                      </dl>
+                      <dl>
+                        <dt>판매상품수</dt>
+                        <dd class="basic">120</dd>
+                      </dl>
+                      <dl class="last">
+                        <dt>신상품순</dt>
+                        <dd class="basic">6</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="brd-pagination swiper-pagination"></div>
+            </div>
+            <script src="../js/swiper.min.js"></script>
+            <script>
+              var swiper = new Swiper(".pmbrdbox", {
+                slidesPerView: "auto",
+                spaceBetween: 10,
+                autoplay: {
+                  delay: 1500
+                },
+                centeredSlides: true,
+                pagination: {
+                  el: ".swiper-pagination",
+                  dynamicBullets: true
+                }
+              });
+            </script>
+          </div>
+
+          <div class="brd-sch">
+            <div class="brd-sch-input">
+              <span class="in-sch">
+                <input
+                  type="text"
+                  placeholder="브랜드명을 입력해주세요."
+                /><button class="keywordbtn">
+                  <img src="../img/sch_icon.svg" alt="검색" />
+                </button>
+              </span>
+            </div>
+            <div class="brd-sort">
+              <div class="brd-sort-box">
+                <span class="brd-sort-lang"
+                  ><button class="titfont">가나다</button></span
+                >
+                <div class="brd-sort-ini">
+                  <button type="" class="basic">ㄱ</button>
+                  <button type="" class="basic">ㄴ</button>
+                  <button type="" class="basic">ㄷ</button>
+                  <button type="" class="basic">ㄹ</button>
+                  <button type="" class="basic">ㅁ</button>
+                  <button type="" class="basic">ㅂ</button>
+                  <button type="" class="basic">ㅅ</button>
+                  <button type="" class="basic">ㅇ</button>
+                  <button type="" class="basic">ㅈ</button>
+                  <button type="" class="basic">ㅊ</button>
+                  <button type="" class="basic">ㅋ</button>
+                  <button type="" class="basic">ㅌ</button>
+                  <button type="" class="basic">ㅍ</button>
+                  <button type="" class="basic">ㅎ</button>
+                </div>
+              </div>
+              <div class="brd-sort-box">
+                <span class="brd-sort-lang"><button class="numfontB">ABC</button></span>
+                <div class="brd-sort-ini">
+                  <button type="" class="basic">A</button>
+                  <button type="" class="basic">B</button>
+                  <button type="" class="basic">C</button>
+                  <button type="" class="basic">D</button>
+                  <button type="" class="basic">E</button>
+                  <button type="" class="basic">F</button>
+                  <button type="" class="basic">G</button>
+                  <button type="" class="basic">H</button>
+                  <button type="" class="basic">I</button>
+                  <button type="" class="basic">J</button>
+                  <button type="" class="basic">K</button>
+                  <button type="" class="basic">L</button>
+                  <button type="" class="basic">M</button>
+                  <button type="" class="basic">N</button>
+                  <button type="" class="basic">O</button>
+                  <button type="" class="basic">P</button>
+                  <button type="" class="basic">Q</button>
+                  <button type="" class="basic">R</button>
+                  <button type="" class="basic">S</button>
+                  <button type="" class="basic">T</button>
+                  <button type="" class="basic">U</button>
+                  <button type="" class="basic">V</button>
+                  <button type="" class="basic">W</button>
+                  <button type="" class="basic">X</button>
+                  <button type="" class="basic">Y</button>
+                  <button type="" class="basic">Z</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--검색 돤 브랜드 리스트-->
+          <div class="brdlist">
+            <h5 class="titfont">
+              검색 된 브랜드<span class="basic">397</span>
+            </h5>
+            <div class="brdlist-name">
+              <p class="none">검색 된 브랜드가 없습니다.</p>
+              <ul>
+                <li>
+                  <a href=""><span class="titfont">KT Traefh헐<em class="basic">(10)</em></span><span class="another">케이티 트레이딩</span></a>
+
+                </li>
+                <li>
+                  <a href=""></a>
+                    <span class="titfont">
+                      B급패밀리<em class="basic">(10)</em></span>
+                    <span class="another">비급패밀리</span></a>
+                  
+                </li>
+                <li>
+                  <a href="">
+                    <span class="titfont">
+                      흔한남매<em class="basic">(10)</em></span
+                    ><span class="another">흔한남매</span></a
+                  >
+                </li>
+                <li>
+                  <a href=""
+                    ><span class="titfont"
+                      >씨앤에이피 클레이티브<em class="basic">(10)</em></span
+                    ><span class="another">케이티 트레이딩</span></a
+                  >
+                </li>
+                <li>
+                  <a href=""
+                    ><span class="titfont"
+                      >카카오프렌즈<em class="basic">(10)</em></span
+                    ><span class="another">KAKAO Friends</span></a
+                  >
+                </li>
+                <li>
+                  <a href=""
+                    ><span class="titfont"
+                      >라인프렌즈<em class="basic">(10)</em></span
+                    ><span class="another">Line Friends</span></a
+                  >
+                </li>
+                <li>
+                  <a href=""
+                    ><span class="titfont"
+                      >KT Trading<em class="basic">(10)</em></span
+                    ><span class="another">케이티 트레이딩</span></a
+                  >
+                </li>
+                <li>
+                  <a href=""
+                    ><span class="titfont"
+                      >B급패밀리<em class="basic">(10)</em></span
+                    ><span class="another">비급패밀리</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--디자인문구-->
+          <div class="brd-bot-list">
+            <p class="etc-brd-tit titfont">디자인 문구</p>
+            <div class="qb">
+              <div class="qb-list">
+                <ul>
+                  <li>
+                    <a href=""><img src="../img/temp/qb01.jpg" /><span>아이비스</span></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/qb02.jpg" /><span>바이풀디자인</span></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/qb03.jpg" /><span>인디고</span></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/qb04.jpg" /><span>아이코닉</span></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/qb05.jpg" /><span>종이나라</span></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/qb06.jpg" /><span>데일리라이크</span></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/qb07.jpg" /><span >시스맥스</span></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/qb08.jpg" /><span>제브라</span></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/qb09.jpg" /><span>아이비스</span></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/qb10.jpg" /><span>바이풀디자인</span></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img src="../img/temp/qb11.jpg" /><span>인디고</span></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/qb12.jpg" /><span>아이코닉</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="brd-bot-list">
+            <p class="etc-brd-tit titfont">캐릭터 문구</p>
+            <div class="qb">
+              <div class="cha-brd-list qb-list">
+                <ul>
+                  <li>
+                    <a href=""><img src="../img/temp/character_0.jpg" /></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/character_1.jpg" /></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/character_2.jpg" /></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/character_3.jpg" /></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/character_4.jpg" /></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/character_5.jpg" /></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/character_6.jpg" /></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/character_7.jpg" /></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/character_8.jpg" /></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/character_9.jpg" /></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/character_10.jpg" /></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="../img/temp/character_11.jpg" /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

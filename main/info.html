@@ -1,0 +1,322 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device=width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<title>합리적인 도매, 천유닷컴</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="../css/layout.css">
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/modernizr.custom.js"></script>
+<script src="../js/gnb.js"></script>
+
+<style>
+.pdinfo-top { padding:15px 20px; position:relative; }
+.pdinfo-top .brd-go { display:inline-block; color:#888; padding:7px 12px 7px 0; background:url(../img/common/more.png) no-repeat right 10px; background-size:8px 8px; }
+/*.pdinfo-top .brd-go { display:inline-block; color:#888; border:#ccc solid 1px; line-height:24px; border-radius:14px; padding:0 8px; margin:7px 0 10px -3px; }*/
+.pdinfo-top h3 { font-size:20px; padding:0 10px 10px 0; overflow:hidden; }
+.pdinfo-top .tag { display:inline-block; margin-left:5px; vertical-align:top; height:auto; line-height:18px; }
+.pdinfo-slide ul li img { width:100%; }
+
+.pdinfo-price .top-price { padding:15px 5px 10px 5px; margin:0 15px; border-bottom:#000 solid 1px; }
+.pdinfo-price .top-price-dc { font-size:20px; float:left; }
+.pdinfo-price .top-price-total { float:right; }
+.pdinfo-price .top-price-total .bfprice { color:#999; text-decoration:line-through; margin-right:5px; }
+.pdinfo-price .top-price-total .afprice em { font-size:24px; }
+.pdinfo-price .dc-price ul { padding:10px 20px; }
+.pdinfo-price .dc-price ul li { padding:7px 0; display:table; width:100%; overflow:hidden; font-size:14px;  }
+.pdinfo-price .dc-price ul li p { display:table-cell; }
+.pdinfo-price .dc-price ul li .dc-price02 { text-align:right; }
+.pdinfo-price .dc-price ul li .dc-price02 span { margin-left:5px;}
+.pdinfo-price .dc-price ul li .dc-price02 > em { font-style:italic;}
+.pdinfo-price .dc-price ul li .dc-price02 span > em { font-size:16px; }
+.smartbnr { padding:12px 13px; overflow:hidden; border:#f5f5f5 solid 10px; }
+.smartbnr span { font-size:14px; line-height:36px; }
+.smartbnr span .info-icon { width:18px; display:inline-block; margin:7px 0 0 4px; vertical-align:top; }
+.smartbnr button { display:inline-block; float:right; padding:7px 14px; color:#eee; background:#28369c; border-radius:16px; }
+.pdinfo-detail { border:#f5f5f5 solid 10px; border-width:10px 0; padding:0 20px 10px 20px; overflow:hidden; }
+.pdinfo-detail h5 { font-size:16px; padding:20px 0 15px 0; }
+.pdinfo-detail dl { display:table; width:100%; }
+.pdinfo-detail dl dt, .pdinfo-detail dl dd { display:table-cell; padding-bottom:10px; font-size:14px; }
+.pdinfo-detail dl dt { width:80px; color:#777; }
+.pdinfo-detail dl dd { letter-spacing:-0.01em;}
+
+.pdinfobox-tab { position:relative; }
+.infotabfix { position:fixed; display:block; top:0; left:0; background: #fff; z-index:9999; }
+.pdinfobox {}
+.pdinfobox .pdinfobox-tab { width:100%; overflow:hidden; }
+.pdinfobox .pdinfobox-tab ul li { width:50%; float:left; padding:17px 0; text-align:center; border-bottom:#ddd solid 1px; }
+.pdinfobox .pdinfobox-tab ul li.on { padding:17px 0 16px 0; border-bottom:#333 solid 2px; }
+.pdinfobox .pdinfobox-tab ul li.on a { color:#000; }
+.pdinfobox .pdinfobox-tab ul li:nth-child(1) a { border-right:#eee solid 1px; }
+.pdinfobox .pdinfobox-tab ul li a { display:block; font-size:15px; color:#888; }
+
+.pdinfobox-tab { position:relative; }
+.infotabfix { position:fixed; display:block; top:0; left:0; background:#fff; z-index:9999; }
+.contents-box { position:relative; border-bottom:#eee solid 1px; }
+.contents-box-f { border-top:#aaa solid 1px; }
+.contents-box .contents-open { padding:15px; font-size:15px; }
+.contents-box .contents-con { padding:15px; display:none; }
+.contents-con-tit, .contents-con-txt { display:table-cell; }
+.contents-con dl { display:table; margin-bottom:8px; }
+.contents-con dl dt, .contents-con dl dd { display:table-cell; vertical-align:middle; font-size:12px; }
+.contents-con dl dt { width:100px; color:#333; padding-right:5px; }
+.contents-con dl dd { color:#666; }
+.contents-con > div { display:table; margin-top:13px; }
+.contents-con > div.first { margin-top:0; }
+.contents-con .contents-con-tit { width:70px; }
+.contents-con .contents-con-txt ul li { position:relative; padding-left:6px; margin-top:8px; color:#666; font-size:12px; line-height:1.5; }
+.contents-con .contents-con-txt ul li:before { position:absolute; width:2px; height:2px; background:#999; content:""; top:7px; left:0; }
+.contents-con .contents-con-txt ul li:first-child { margin-top:0; }
+
+.btn-soldout { width:49.8%; background: #ccc; border: #ccc solid 1px; color: #fff; }
+.btn-smart { width:49.8%; margin-left:0.4%; }
+</style>
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <div id="hdwrap">
+        <div class="sub-top">
+          <a href="" class="backicon" onclick="history.back()"><img src="../img/common/back_icon.svg"></a>
+          <h3 class="">상품정보</h3>
+          <a href="" class="carticon"><em class="numfontB">20</em></a>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="commonwrap">
+        <div class="pdinfo-top">
+           <a href="" class="brd-go">데일리라이크 바로가기</a>
+           <h3 class="titfont">원데이 스터디플래너 - 3Times (공시생 취준생 3개월)<span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span></h3>
+        </div>
+        <div class="pdinfo-slide">
+          <ul>
+            <li><img src="../img/product/thumb/04.jpg" alt=""></li>
+          </ul>
+        </div>
+        <div class="pdinfo-price">
+          <div class="top-price" style="overflow:hidden;">
+            <p class="top-price-dc"><span class="numfontB rd">~37%</span></p>
+            <p class="top-price-total"><span class="bfprice"><em class="numfontR">9,906</em>원</span><span class="afprice"><em class="numfontB">7,960</em>원</span></p>
+          </div>
+          <div class="dc-price">
+            <ul>
+              <li>
+                <p class="dc-price01">1개 구매시 할인</p>
+                <p class="dc-price02"><em class="numfontR rd">33%</em><span class=""><em class="numfontB">7,960</em>원</span></p>
+              </li>
+              <li>
+                <p class="dc-price01">2개 구매시 할인</p>
+                <p class="dc-price02"><em class="numfontR rd">37%</em><span class=""><em class="numfontB">7,460</em>원</span></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="pdinfo-detail">
+          <h5 class="titfont">상품정보</h5>
+          <div>
+            <dl>
+              <dt>상품번호</dt>
+              <dd>28469</dd>
+            </dl>
+            <dl>
+              <dt>대표바코드</dt>
+              <dd>8809648072231</dd>
+            </dl>
+          </div>
+        </div>
+        
+        <script>
+          $(document).ready(function () {
+            $(window).scroll(function () {
+              if ($(this).scrollTop() > 940) {
+                $(".pdinfobox-tab").addClass("infotabfix");
+              } else {
+                $(".pdinfobox-tab").removeClass("infotabfix");
+              }
+            })
+          }); 
+        </script>
+        <div class="pdinfobox">
+          <div class="pdinfobox-tab">
+            <ul>
+              <li class="on"><a class="">상품설명</a></li>
+              <li><a class="">배송/교환/환불</a></li>
+            </ul>
+          </div>
+          <!--내용-->
+          <div class="pdinfobox-content">
+            <img src="../img/88888.jpg" style="width:100%;">
+          </div>
+          <div class="pdinfobox-content">
+              <div class="contents-box-f contents-box">
+                <h5 class="contents-open titfont">상품정보 제공고시</h5>
+                <div class="contents-con">
+                  <dl>
+                    <dt class="titfont">품명 및 모델명</dt>
+                    <dd>스타일 마스크</dd>
+                  </dl>
+                  <dl>
+                    <dt class="titfont">제품구성품</dt>
+                    <dd>마스크 1장</dd>
+                  </dl>
+                  <dl>
+                    <dt class="titfont">제조사/수입사</dt>
+                    <dd>엔엠텍코리아(주)</dd>
+                  </dl>
+                  <dl>
+                    <dt class="titfont">포장 사이즈</dt>
+                    <dd>155 X 235 X 15 (mm) (가로 X 세로 X 높이)</dd>
+                  </dl>
+                  <dl>
+                    <dt class="titfont">원산지</dt>
+                    <dd>KOREA</dd>
+                  </dl>
+                  <dl>
+                    <dt class="titfont">소재</dt>
+                    <dd>Polyester</dd>
+                  </dl>
+                  <dl>
+                    <dt class="titfont">무게</dt>
+                    <dd>50g</dd>
+                  </dl>
+                  <dl>
+                    <dt class="titfont">법에 의한 인증,<br>허가 확인사항</dt>
+                    <dd>해당없음</dd>
+                  </dl>
+                  <dl>
+                    <dt class="titfont">사용 대상 연령</dt>
+                    <dd>만 14세 이상</dd>
+                  </dl>
+                  <dl>
+                    <dt class="titfont">A/S 책임자와<br>전화번호</dt>
+                    <dd>천유닷컴 고객센터 1544-7102</dd>
+                  </dl>
+                  <dl>
+                    <dt class="titfont">품질보증기준</dt>
+                    <dd>수령일로부터 7일이내 교환 및 환불 가능<br>(제품에 손상이 없는 경우 해당)</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="contents-box">
+                <h5 class="contents-open titfont">배송정보</h5>
+                <div class="contents-con">
+                  <div class="first">
+                    <span class="contents-con-tit titfont">배송일정</span>
+                    <div class="contents-con-txt">
+                      <ul>
+                        <li>상품 배송은 입금완료일로 기준하여 당일 배송을 하고 있으며, 택배사의 사정에 따라 평균 1일~2일 이내 상품을 받을 수 있습니다.</li>
+                        <li>당일 주문 마감시간은 오후 3시까지 이며(토요일 오후 1시), 12월 및 시즌의 경우 시간이 변경됩니다.</li>
+                        <li>시즌(신정, 구정, 어린이날, 크리스마스 등)의 경우 배송 마감시간 및 상품 수령이 평소보다 1일~2일 정도 늦어질 수 있습니다.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="contents-con-tit titfont">배송비</span>
+                    <div class="contents-con-txt">
+                      <ul>
+                        <li>택배 배송비의 경우 도매 회원은 기본 2,500원이며, 200,000원 이상 주문시 무료배송입니다.(도서산간의 경우 유료 배송 및 무료 배송 모두 추가 배송비가 발생합니다.)</li>
+                        <li>천유닷컴 외 상품일 경우 입점사 별도 제각각 배송비가 측정됩니다.</li>
+                        <li>일부 제품은 무료 배송의 요건에 포함되지 않을 수 있습니다.(예, 가구 및 특가 상품 등)</li>
+                        <li>사전 협의 전 해외배송에서 발생한 모든 불량, 하자상품 및 수량 부족은 천유닷컴 측 책임 없음으로 처리 합니다</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contents-box">
+                <h5 class="contents-open titfont">반품/환불/교환</h5>
+                <div class="contents-con">
+                  <div class="first">
+                    <span class="contents-con-tit titfont">안내</span>
+                    <div class="contents-con-txt">
+                      <ul>
+                        <li>고객 직배송의 경우 상품 수령 후 48시간 이내 주문 건에 한하여 재판매 가능한 상품은 반품, 환불이 가능합니다. 변심 반품시 포장이 훼손되어 상품가치가 상실된 경우에는 반품이 불가능 합니다. (프로모션, 대량 주문납품 예외 )불량 상품 및 오배송의 경우 수령 후 10일 이내 의사표시를 하지 않을시 이상없음 으로 처리합니다.</li>
+                        <li>주문 및 결제 후 천유닷컴에서 재고 부족으로 인한 미발송 상품에 대해서는 포인트 또는 상품권으로 해당 상품의 금액만큼 적립됩니다.</li>
+                        <li>불량 및 변심 반품의 환불은 포인트 또는 상품권으로 처리되며, 포인트 또는 상품권 금액은 거래 종료시 환불 처리됩니다. 반품 접수는 꼭 천유닷컴 택배사로 이용되며, 이 외 택배사의 비용은 회원이 부담합니다. 반품/환불/교환 접수는 반품접수 게시판에 접수해주시면 감사하겠습니다.</li>
+                        <li>도매 회원의 경우 천유닷컴과의 거래 약정서가 모든 계약에 최우선합니다. 일반회원 고객 주문과 다릅니다.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contents-box">
+                <h5 class="contents-open titfont">고객센터</h5>
+                <div class="contents-con">
+                  <div class="first">
+                    <span class="contents-con-tit titfont">안내</span>
+                    <div class="contents-con-txt">
+                      <ul>
+                        <li>상품/교환/반품/배송/기타 문의는 천유닷컴 게시판 및 고객센터 1544-7102 에서 빠르고 편리하게 처리해드립니다.</li>
+                        <li>평일 오전 9시 - 오후 6시 / 토요일, 일요일, 공휴일 휴무</li>
+                        <li>교환&반품 주소지 : 부산 금정구 공단서로 8번길 49 금사화신빌딩 2층 주식회사 천유닷컴</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+        </div>
+
+        <!--구매하기푸터-->
+        <div class="pd-buy-box">
+          <div class="pd-buy-boxwrap">
+            <div style="display:none;">
+              <div class="pd-buy-select">
+                <!--옵션선택시 담기는 상품박스-->
+                <div class="optbox-cart">
+                  <div>
+                    <p class="optbox-cart-tit">옵션 01.<span class="titfont"> 버건디</span></p>
+                    <div class="optbox-cart-opt">
+                      <span class="item-ckd selectckd" style="">
+                        <input type="checkbox" id="del-ckd01">
+                        <label for="del-ckd01">선택</label>
+                      </span>
+                      <input type="text" class="optnum" value="0"><button class="down"></button><button
+                        class="up"></button>
+                      <em class="dc numfontR">33%</em>
+                      <span class="opt-dc-price numfontB">4,700</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="optbox-cart">
+                  <div>
+                    <p class="optbox-cart-tit">옵션 01.<span class="titfont"> 버건디</span></p>
+                    <div class="optbox-cart-opt">
+                      <span class="item-ckd selectckd" style="">
+                        <input type="checkbox" id="del-ckd01">
+                        <label for="del-ckd01">선택</label>
+                      </span>
+                      <input type="text" class="optnum" value="0"><button class="down"></button><button
+                        class="up"></button>
+                      <em class="dc numfontR">33%</em>
+                      <span class="opt-dc-price numfontB">4,700</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="optbox-total-price">
+                <span class="vat demi">*VAT포함 / 배송비 제외</span>
+                <span class="total titfont">총금액<em class="numfontB">9,960</em>원</span>
+              </div>
+            </div>
+            <div class="optbox-btn">
+              <!--로그인후 버튼-->
+              <!--<button type="" class="btn-wish">찜</button><button type="" class="btn-cart">장바구니</button><button type="" class="btn-buy">바로구매</button>-->
+              <!--로그인전 버튼-->
+              <!--<button type="" class="btn-dome">도매 회원 전용</button>-->
+              <!--품절 버튼-->
+              <button type="" class="btn-soldout">품절</button><button type="" class="btn-smart btn-buy">재입고알림</button>
+            </div>
+            <button class="hitbtn"></button>
+          </div>
+        </div>
+    </section>
+
+
+  </div>
+</body>
+</html>

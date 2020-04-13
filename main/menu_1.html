@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device=width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<title>합리적인 도매, 천유닷컴</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="../css/layout.css">
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/modernizr.custom.js"></script>
+<script>
+function tab_menu(num){	
+	var f = $('.page-tab').find('a > span');
+	for ( var i = 0; i < f.length; i++ ) {			
+		if ( i == num) {
+			f.eq(i).addClass('selected');	
+			$('.page-tab0' + i ).show();
+		} else {
+			f.eq(i).removeClass('selected');
+			$('.page-tab0' + i ).hide();
+		}
+	}
+}
+</script>
+<style>
+
+.cattop-tab-list {}
+.cattop-tab-list .list01 h5 { font-size:15px; padding:18px 20px; border-bottom:#f3f3f3 solid 1px; color:#333;  }
+.cattop-tab-list .list01 h5.active { color:#102dc3; }
+.cattop-tab-list .list01 h5.active span { background:url(../img/mus.svg) no-repeat right; }
+.cattop-tab-list .list01 h5 span { display:block; width:100%; background:url(../img/plus.svg) no-repeat right; }
+.cattop-tab-list .list02 { display:none; background:#f9f9f9;border-bottom:#f3f3f3 solid 1px; }
+.cattop-tab-list .list02 li a { display:block; padding:16px 20px; font-size:14px; color:#555; }
+.cattop-tab-list .list02 li a:active { background:#f0f0f0; }
+.list-open-box { display:none; }
+
+.cattop-tab-brd .brdlist { border-top:#f5f5f5 solid 10px; margin-top:0; }
+.brdlist { padding:20px; margin-top:10px; background:#fff; overflow:hidden; }
+.brdlist h5 { font-size:17px; padding-bottom:7px; border-bottom:#e0e0e0 solid 1px; }
+.brdlist h5 span { margin-left:3px; color:#2c398f; }
+.brdlist .brdlist-name { padding:0 2px; padding-top:25px; }
+.brdlist-name p { font-size:14px; text-align:center; padding:20px 0 40px; color:#999; }
+.brdlist .brdlist-name ul li { float:left; width:50%; margin-bottom:17px; font-size:14px; }
+.brdlist .brdlist-name ul li span { display:block; width:100%; }
+.brdlist .brdlist-name ul li .another { padding-top:5px; font-size:11px; color:#999; height:20px; }
+.brdlist .brdlist-name ul li em { color:#4c64dc; margin-left:5px; font-size:12px; }
+</style>
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <div id="hdwrap">
+        <div class="sub-top">
+          <a href="" class="backicon" onclick="history.back()"><img src="../img/common/back_icon.svg"></a>
+          <h3 class="">디자인 문구</h3>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="page-tab cattop-tab">
+        <a onClick="tab_menu(0)" href="#this"><span class="selected">카테고리</span></a>
+        <a onClick="tab_menu(1)" href="#this"><span>브랜드 검색</span></a>
+      </div>
+      <div class="page-tab00 cattop-tab-list">
+        <ul class="list01">
+          <li>
+            <h5 class="acd-open"><span>다이어리/캘린더</span></h5>
+            <ul class="acd-box list02">
+              <li><a href="#" class="titfont">전체</a></li>
+              <li><a href="#">심플</a></li>
+              <li><a href="#">일러스트/캐릭터</a></li>
+              <li><a href="#">포토</a></li>
+              <li><a href="#">데스크캘린더</a></li>
+              <li><a href="#">벽걸이캘린더</a></li>
+              <li><a href="#">리필/속지</a></li>
+            </ul>
+          </li>
+          <li>
+            <h5 class="acd-open"><span>플래너</span></h5>
+            <ul class="acd-box list02">
+              <li><a href="#" class="titfont">전체</a></li>
+              <li><a href="#">주간스케줄러</a></li>
+              <li><a href="#">월간스케줄러</a></li>
+              <li><a href="#">캐쉬북/용돈</a></li>
+              <li><a href="#">스터디/공부</a></li>
+              <li><a href="#">일기장/기타</a></li>
+            </ul>
+          </li>
+          <li>
+            <h5 class="acd-open"><span>앨범/기록</span></h5>
+            <ul class="acd-box list02">
+              <li><a href="#" class="titfont">전체</a></li>
+              <li><a href="#">주간스케줄러</a></li>
+              <li><a href="#">월간스케줄러</a></li>
+              <li><a href="#">캐쉬북/용돈</a></li>
+              <li><a href="#">스터디/공부</a></li>
+              <li><a href="#">일기장/기타</a></li>
+            </ul>
+          </li>
+          <li>
+            <h5 class="acd-open"><span>노트/메모</span></h5>
+            <ul class="acd-box list02">
+              <li><a href="#" class="titfont">전체</a></li>
+              <li><a href="#">노트(심플디자인)</a></li>
+              <li><a href="#">노트(캐릭터디자인)</a></li>
+              <li><a href="#">노트(일러스트디자인)</a></li>
+              <li><a href="#">노트(초등학교)</a></li>
+              <li><a href="#">수첩/메모지</a></li>
+              <li><a href="#">접착식메모지</a></li>
+              <li><a href="#">연습장/종합장</a></li>
+              <li><a href="#">기능성 노트</a></li>
+            </ul>
+          </li>
+          <li>
+            <h5 class="acd-open"><span>필통</span></h5>
+            <ul class="acd-box list02">
+              <li><a href="#">전체</a></li>
+              <li><a href="#">패브릭/면류</a></li>
+              <li><a href="#">인조가죽(일러스트)</a></li>
+              <li><a href="#">인조가죽(심플타입)</a></li>
+              <li><a href="#">인조가죽(캐릭터)</a></li>
+              <li><a href="#">종이/플라스틱류</a></li>
+              <li><a href="#">스틸류</a></li>
+            </ul>
+          </li>
+          <li>
+            <h5 class="acd-open"><span>스티커/스탬프</span></h5>
+            <ul class="acd-box list02">
+              <li><a href="#">전체</a></li>
+              <li><a href="#">스티커(캐릭터)</a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </li>
+          <li>
+            <h5 class="acd-open"><span>편지/카드</span></h5>
+            <ul class="acd-box list02">
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+      <script src="../js/acd.js"></script>
+      <!--brand search-->
+      <div class="page-tab01 cattop-tab-brd" style="display:none;">
+        <div class="contents-sch">
+          <div class="t-sch">
+            <span class="in-sch">
+              <input type="text" placeholder="검색어를 입력해주세요"><button class="keywordbtn"><img src="../img/sch_icon.svg"
+                  alt="검색"></button>
+            </span>
+          </div>
+        </div>
+        <div class="brdlist">
+          <h5 class="titfont">검색 된 브랜드<span class="basic">397</span></h5>
+          <div class="brdlist-name">
+            <ul>
+              <li><a href=""><span class="titfont">KT Trading<em class="numfontR">(10)</em></span><span class="another">케이티 트레이딩</span></a></li>
+              <li><a href=""><span class="titfont">B급패밀리<em class="numfontR">(10)</em></span><span class="another">비급패밀리</span></a></li>
+              <li><a href=""><span class="titfont">흔한남매<em class="numfontR">(10)</em></span><span class="another">흔한남매</span></a></li>
+              <li><a href=""><span class="titfont">씨앤에이피 클레이티브<em class="numfontR">(10)</em></span><span class="another">케이티 트레이딩</span></a></li>
+              <li><a href=""><span class="titfont">카카오프렌즈<em class="numfontR">(10)</em></span><span class="another">KAKAO Friends</span></a></li>
+              <li><a href=""><span class="titfont">라인프렌즈<em class="numfontR">(10)</em></span><span class="another">Line Friends</span></a></li>
+              <li><a href=""><span class="titfont">KT Trading<em class="numfontR">(10)</em></span><span class="another">케이티 트레이딩</span></a></li>
+              <li><a href=""><span class="titfont">B급패밀리<em class="numfontR">(10)</em></span><span class="another">비급패밀리</span></a></li>
+              <li><a href=""><span class="titfont">흔한남매<em class="numfontR">(10)</em></span><span class="another">흔한남매</span></a></li>
+              <li><a href=""><span class="titfont">씨앤에이피 클레이티브<em class="numfontR">(10)</em></span><span class="another">케이티 트레이딩</span></a></li>
+              <li><a href=""><span class="titfont">카카오프렌즈<em class="numfontR">(10)</em></span><span class="another">KAKAO Friends</span></a></li>
+              <li><a href=""><span class="titfont">라인프렌즈<em class="numfontR">(10)</em></span><span class="another">Line Friends</span></a></li>
+              <li><a href=""><span class="titfont">KT Trading<em class="numfontR">(10)</em></span><span class="another">케이티 트레이딩</span></a></li>
+              <li><a href=""><span class="titfont">B급패밀리<em class="numfontR">(10)</em></span><span class="another">비급패밀리</span></a></li>
+              <li><a href=""><span class="titfont">흔한남매<em class="numfontR">(10)</em></span><span class="another">흔한남매</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+</body>
+</html>

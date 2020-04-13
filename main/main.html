@@ -1,0 +1,913 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device=width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<title>합리적인 도매, 천유닷컴</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="../css/layout.css">
+<link rel="stylesheet" href="../css/swiper.min.css">
+
+
+<style>
+/*main_categorylist*/
+.cat-list {}
+.cat-list ul { width:100%; overflow:hidden; border-top:#eee solid 1px; }
+.cat-list ul li { float:left; width:20%; text-align:center; border:#eee solid 1px; border-width:0 0 1px 1px; }
+.cat-list ul li:nth-child(1), .cat-list ul li:nth-child(6) { border-width:0 0 1px 0; }
+.cat-list ul li a { display:block; padding:8px 0; }
+.cat-list ul li a img { height:65px; vertical-align:middle; }
+
+/*main_quickbrand*/
+.qb { width:100%; overflow:hidden; position:relative; padding:5px 0 25px 0; border-top:#f5f5f5 solid 10px; background:#fff; }
+.qb-list { width:100%; }
+.qb-list ul {  width:100%; overflow:hidden; background:#fff; }/* display:flex; display: -webkit-flex; display:-ms-flexbox; flex-wrap:wrap;*/
+.qb-list ul li { width:25%; float:left; }
+.qb-list ul li a { display:block; width:100%; padding:10px 0; text-align:center; }
+.qb-list ul li img { width:70%; }
+.qb-list ul li span { display:block; padding-top:6px; font-size:11px; color:#666; }
+.qb .swiper-pagination { bottom:8px; width:100%; text-align:center; }
+/*main_productlist*/
+.main-pdwrap { width:100%; overflow:hidden; border-top:#f5f5f5 solid 10px; }
+.main-pd-tit { padding:10px 15px; font-size:14px; background:#2736af; color:#fff; overflow:hidden; }
+.pdtab { border-bottom:#ddd solid 1px; }
+.pdtab ul { white-space:nowrap; overflow-x:auto; padding-left:10px; }
+.pdtab ul li { display:inline-block; padding:0 8px; }
+.pdtab ul li a { display:block; position:relative; padding:13px 0; color:#333; font-size:14.5px; }
+.pdtab ul li.selected a { color:#1b3bb5; font-weight:bold; }
+.pdtab ul li.selected a:after { position:absolute; left:0; bottom:0; width:100%; height:2px; background:#1b3bb5; content:""; }
+.pd-swiper { width:100%; background:#fff; }
+.pd-swiper .swiper-wrapper { }
+.pd-swiper .swiper-slide { width:180px !important; }
+.pd-swiper .swiper-slide img { width:100%;}
+.pd-swiper .swiper-slide a.selected, .swiper-slide a:hover { }
+.pd-swiper .swiper-slide {
+      /* Center slide text vertically */
+	  float:left; padding:0;
+      -webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;
+      -webkit-box-align: center; -ms-flex-align: center;-webkit-align-items: center; align-items: center;  }
+      
+.main_slider { width:100%; position:relative; }
+.main_slider img { width:100%; }
+.main_slider .main-bullet { width:40px; bottom:98px; right:15px; padding:4px 0 3px 0; font-family: AppleSDGothicNeo, HelveticaNeue,'Droid Sans','Malgun Gothic','맑은 고딕',sans-serif; background:rgba(0, 0, 0, .4); border-radius:13px; color:#ddd; font-size:10px; }
+.main_slider .main-bullet .swiper-pagination-current { color:#fff; font-size:12px; font-weight:bold; }
+.main_slider .main-bullet .swiper-pagination-bullet { width:10px;height:10px; }
+.swiper-button-pause { position:absolute; bottom:10px; left:20px; z-index:10; }
+.c-banner { width:100%; overflow:hidden; }
+.c-banner img { width:100%; }
+</style>
+</head>
+
+<body>
+  <div id="wrap">
+
+    <!---->
+    <header>
+      <div id="hdwrap">
+        <div class="h_header">
+          <h1 class="logo"><img src="../img/common/top_logo.svg"></h1>
+          <div class="sch">
+            <div class="t-sch">
+              <span class="in-sch">
+                <input type="text" placeholder="찾으시는 상품명 또는 상품번호"><button class="keywordbtn"><img
+                    src="../img/sch_icon.svg" alt="검색"></button>
+              </span>
+              <!--<span class="cart"><img src="../img/qr_img.jpg" alt="qrcode"></span>-->
+            </div>
+          </div>
+          <div class="main-gnb">
+            <ul class="bot-gnb">
+              <li class="selected"><a href="#">홈</a></li>
+              <li><a href="#">베스트</a></li>
+              <li><a href="#">기획전<em class="gnb-new"></em></a></li>
+              <li><a href="#">브랜드</a></li>
+              <li><a href="#">최저가도전</a></li>
+              <li><a href="#">땡처리</a></li>
+            </ul>
+
+          </div>
+          <!-- 
+                                 
+                                        </div>-->
+        </div>
+        <div class="active_header">
+          <div class="main-gnb">
+            <ul class="bot-gnb">
+              <li class="selected"><a href="#">홈</a></li>
+              <li><a href="#">베스트</a></li>
+              <li><a href="#">기획전<em class="gnb-new"></em></a></li>
+              <li><a href="#">브랜드</a></li>
+              <li><a href="#">최저가도전</a></li>
+              <li><a href="#">땡처리</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+
+      </div>
+    </header>
+    <section>
+      <div class="main_slider swiper1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href=""><img src="../img/main_s_01.jpg" alt=""></a></div>
+          <div class="swiper-slide"><a href=""><img src="../img/main_s_02.jpg" alt=""></a></div>
+          <div class="swiper-slide"><a href=""><img src="../img/main_s_03.jpg" alt=""></a></div>
+        </div>
+        <div class="main-bullet swiper-pagination swiper-pagination1"></div>
+      </div>
+    </div>
+  </div>
+  <div class="cat-list">
+    <ul>
+      <li><a href=""><img src="../img/mc02.png" alt="전체"></a></li>
+      <li><a href=""><img src="../img/mc02.png" alt="디자인문구"></a></li>
+      <li><a href=""><img src="../img/mc03.png" alt="오피스용품"></a></li>
+      <li><a href=""><img src="../img/mc04.png" alt="패션잡화"></a></li>
+      <li><a href=""><img src="../img/mc05.png" alt="캠핑/여행"></a></li>
+      <li><a href=""><img src="../img/mc06.png" alt="홈데고"></a></li>
+      <li><a href=""><img src="../img/mc07.png" alt="디지털/핸드폰"></a></li>
+      <li><a href=""><img src="../img/mc08.png" alt="키친/유아식기"></a></li>
+      <li><a href=""><img src="../img/mc09.png" alt="완구/인형"></a></li>
+      <li><a href=""><img src="../img/mc10.png" alt="필기/학습"></a></li>
+    </ul>
+  </div>
+
+  <div class="qb swiper3">
+    <div class="qb-list swiper-wrapper">
+      <ul class="swiper-slide">
+        <li><a href=""><img src="../img/temp/qb01.jpg"><span>아이비스</span></a></li>
+        <li><a href=""><img src="../img/temp/qb02.jpg"><span>바이풀디자인</span></a></li>
+        <li><a href=""><img src="../img/temp/qb03.jpg"><span>인디고</span></a></li>
+        <li><a href=""><img src="../img/temp/qb04.jpg"><span>아이코닉</span></a></li>
+        <li><a href=""><img src="../img/temp/qb05.jpg"><span>종이나라</span></a></li>
+        <li><a href=""><img src="../img/temp/qb06.jpg"><span>데일리라이크</span></a></li>
+        <li><a href=""><img src="../img/temp/qb07.jpg"><span>시스맥스</span></a></li>
+        <li><a href=""><img src="../img/temp/qb08.jpg"><span>제브라</span></a></li>
+      </ul>
+      <ul class="swiper-slide">
+        <li><a href=""><img src="../img/temp/qb09.jpg"><span>아이비스</span></a></li>
+        <li><a href=""><img src="../img/temp/qb10.jpg"><span>바이풀디자인</span></a></li>
+        <li><a href=""><img src="../img/temp/qb11.jpg"><span>인디고</span></a></li>
+        <li><a href=""><img src="../img/temp/qb12.jpg"><span>아이코닉</span></a></li>
+        <li><a href=""><img src="../img/temp/qb13.jpg"><span>아이비스</span></a></li>
+        <li><a href=""><img src="../img/temp/qb01.jpg"><span>데일리라이크</span></a></li>
+        <li><a href=""><img src="../img/temp/qb04.jpg"><span>시스맥스</span></a></li>
+        <li><a href=""><img src="../img/temp/qb07.jpg"><span>제브라</span></a></li>
+      </ul>
+    </div>
+    <div class="qb-brd-bullet swiper-pagination"></div>
+  </div>
+  <div class="main-pdwrap">
+    <p class="main-pd-tit titfont">따끈따끈한 신상품<a href="" class="basic"
+        style="display:inline-block; float:right; font-size:12px; color:#eee;">더보기 +</a></p>
+    <div class="pdtab">
+      <ul>
+        <li class="selected"><a href="#">전체</a></li>
+        <li><a href="#">디자인문구</a></li>
+        <li><a href="#">오피스용품</a></li>
+        <li><a href="#">패션잡화</a></li>
+        <li><a href="#">캠핑/여행</a></li>
+        <li><a href="#">홈데코</a></li>
+        <li><a href="#">디지터/핸드폰</a></li>
+        <li><a href="#">키친/유아</a></li>
+        <li><a href="#">완구/인형</a></li>
+        <li><a href="#">필기류/학습</a></li>
+      </ul>
+    </div>
+
+    <div class="pdlist">
+
+      <div class="pd-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs01.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs02.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs03.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs04.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--swiper-slide-->
+          <div class="swiper-slide">
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs05.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs06.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs07.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs02.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--swiper-slide-->
+          <div class="swiper-slide">
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs01.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs02.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs03.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs04.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--swiper-slide-->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--베스트-->
+  <div class="main-pdwrap">
+    <p class="main-pd-tit titfont">도매 베스트</p>
+    <div class="pdtab">
+      <ul>
+        <li class="selected"><a href="#">전체</a></li>
+        <li><a href="#">디자인문구</a></li>
+        <li><a href="#">오피스용품</a></li>
+        <li><a href="#">패션잡화</a></li>
+        <li><a href="#">캠핑/여행</a></li>
+        <li><a href="#">홈데코</a></li>
+        <li><a href="#">디지터/핸드폰</a></li>
+        <li><a href="#">키친/유아</a></li>
+        <li><a href="#">완구/인형</a></li>
+        <li><a href="#">필기류/학습</a></li>
+      </ul>
+    </div>
+
+    <div class="pdlist">
+      <div class="pd-swiper swiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs01.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs02.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs03.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs04.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--swiper-slide-->
+          <div class="swiper-slide">
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs05.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs06.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs07.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs02.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--swiper-slide-->
+          <div class="swiper-slide">
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs01.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs02.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs03.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="">
+                <div class="pdlist-thumb"><img src="../img/temp/bs04.jpg" alt=""></div>
+              </a>
+              <div class="pdlist-txt">
+                <!---->
+                <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                <div class="pdprice">
+                  <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                  <p class="pdprice-pr">
+                    <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                    <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                  </p>
+                </div>
+                <div class="pdlist-cart">
+                  <span class="">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                  </span>
+                  <button class="pdlist-cart-btn">담기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--swiper-slide-->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="c-banner"><a href="#"><img src="../img/mb01.jpg"></a></div>
+  <div id="b-footer">
+    <div class="bf-cs">
+      <div class="bf-tel numfontB"><span>1544-7102</span></div>
+      <div class="bf-tel-txt">
+        <p>평일 <em>09:00 ~ 18:00</em> 점심<em>12:30 ~ 13:30</em><span>토,일 및 공휴일 휴무</span></p>
+        <div>
+          <ul class="bf-inner">
+            <li><em class="c-dot basic">1</em>영업</li>
+            <li><em class="c-dot basic">2</em>정산</li>
+            <li><em class="c-dot basic">3</em>물류</li>
+            <li><em class="c-dot basic">4</em>기타</li>
+          </ul>
+        </div>
+        <div class="bf-btn"><a href="#" class="basic">1:1문의</a><a href="#" class="basic">자주 묻는 질문</a></div>
+      </div>
+    </div>
+    <div class="bf-ntc">
+      <h5 class="">공지사항</h5>
+      <div class="bf-ntc-tit">
+        <span>마스크(KF94, KF80) 관련 공지</span>
+      </div>
+    </div>
+    <div class="bf-copy">
+      <div class="bf-copy-t">
+        <h5><img src="../img/common/top_logo.svg"></h5>
+        <ul>
+          <li>대표자 : 조영동</li>
+          <li>소재지 : 부산 금정구 공단서로 8번길 49 금사화신빌딩 2층 주식회사 천유닷컴</li>
+          <li>사업자등록번호 : 607-86-02860</li>
+          <li>통신판매업신고 : 제2016-부산금정-0427호 <a href="#" target="_blank">[사업자 정보확인]</a></li>
+          <li>FAX : [051] 502-2408 개인정보관리책임자 : 김철</li>
+        </ul>
+      </div>
+      <div class="bf-copy-b">
+        <a href="#">회사소개</a>
+        <a href="#">채용안내</a>
+        <a href="#">이용약관</a>
+        <a href="#">개인정보취급방침</a>
+        <a href="#" class="last">입점업체SCM</a>
+      </div>
+    </div>
+  </div>
+  <script src="../js/swiper.min.js"></script>
+  <script>
+    var swiper1 = new Swiper('.main_slider', {
+      centeredSlides: false,
+      autoplay: {
+        delay: 1500,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+    });
+    var swiper3 = new Swiper('.qb', {
+      centeredSlides: false,
+      effect: 'fade',
+      autoplay: {
+        delay: 1800,
+      },
+      pagination: {
+        el: '.qb-brd-bullet',
+      },
+    });
+    var swiper2 = new Swiper('.pd-swiper', {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      centeredSlides: false,
+    });
+  </script>
+  </section>
+  <footer>
+    <div id="f-fix">
+      <a href="#" onclick="history.back()" class=""></a>
+      <a href="#top" class=""></a>
+      <div class="f-tab">
+        <ul>
+          <li>
+            <a title="menu" class="cate-btn" href="#"><img src="../img/common/f_menu.svg" alt="카테고리">
+              <h5>카테고리</h5>
+            </a>
+          </li>
+          <li><img src="../img/common/f_sch.svg" alt="검색">
+            <h5>검색</h5>
+          </li>
+          <li class="homeicon"><img src="../img/common/f_home.svg" alt="home">
+            <h5 style="text-indent:-9999px">홈</h5>
+          </li>
+          <li><img src="../img/common/f_my.svg" alt="마이">
+            <h5>마이</h5>
+          </li>
+          <li><img src="../img/common/f_cart.svg" alt="장바구니">
+            <h5>장바구니</h5>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </footer>
+  </div>
+</body>
+</html>

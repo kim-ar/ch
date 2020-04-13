@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*  font-family: 'Arita'!important;*/
+/* base */
+html{ min-width:320px; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, input, textarea, p, blockquote, th, td, textfield, select{
+	margin:0;
+	padding:0;
+	}
+body { overflow:auto; height:100%; color:#111; font-size:13px; font-family: 'NtR', Sans-serif; font-weight:normal; letter-spacing:-0.05em; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+h1, h2, h3, h4, h5, h6 {font-weight:normal;	font-size:1em; }
+ol, ul, li, dd, dl, dt  {list-style:none; }
+fieldset, legend {border:0;	margin:0; padding:0; }
+img { border:0; vertical-align:middle; }
+label{cursor:pointer;}
+address, caption, em{font-weight:normal;font-style:normal; }
+a { text-decoration:none; color:#333; }/* -webkit-tap-highlight-color:rgba(0,0,0,0.3); -webkit-tap-highlight-color:transparent;*/
+::selection { color:#fff; background:#000;}
+input, button, select { letter-spacing:-0.05em; vertical-align:middle; }
+button { border:0; background:none; -webkit-appearance: none; -moz-appearance: none; appearance: none;cursor:pointer}
+textarea { resize:none; }
+select { padding:0 0 0 8px; border:0; -webkit-border-radius:0; -webkit-appearance:none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background:#fff url(../img/common/downicon.svg) no-repeat; }
+input[type="radio"] { -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+input:focus { outline: none; }
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+@font-face {
+    font-family: 'NtR';
+    font-style: normal;
+    font-weight: normal;
+    src: local('notokr regular'), local('notokr-regular');
+	src: url(../font/notokr-regular.eot);
+	src: url(../font/notokr-regular.eot?#iefix) format('embedded-opentype'),
+	     url(../font/notokr-regular.woff2) format('woff2'),
+         url(../font/notokr-regular.woff) format('woff'),
+		 url(../font/notokr-regular.ttf) format('truetype'),
+         url(../font/notokr-regular.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Ntdl';
+    font-style: normal;
+    font-weight: normal;
+    src: local('notokr demilight'), local('notokr-demilight');
+	src: url(../font/notokr-demilight.eot);
+	src: url(../font/notokr-demilight.eot?#iefix) format('embedded-opentype'),
+	     url(../font/notokr-demilight.woff2) format('woff2'),
+         url(../font/notokr-demilight.woff) format('woff'),
+		 url(../font/notokr-demilight.ttf) format('truetype'),
+         url(../font/notokr-demilight.otf) format('opentype');
+}
+@font-face {
+    font-family: 'NtdM';
+    font-style: normal;
+    font-weight: normal;
+    src: local('notokr medium'), local('notokr-medium');
+	src: url(../font/notokr-medium.eot);
+	src: url(../font/notokr-medium.eot?#iefix) format('embedded-opentype'),
+	     url(../font/notokr-medium.woff2) format('woff2'),
+         url(../font/notokr-medium.woff) format('woff'),
+		 url(../font/notokr-medium.ttf) format('truetype'),
+         url(../font/notokr-medium.otf) format('opentype');
+}
+
+
+@font-face {
+    font-family: 'LatoB';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Lato Bold'), local('Lato-Bold');
+	src: url(../font/Lato-Bold.eot);
+	src: url(../font/Lato-Bold.eot?#iefix) format('embedded-opentype'),
+	     url(../font/Lato-Bold.woff2) format('woff2'),
+         url(../font/Lato-Bold.woff) format('woff'),
+		 url(../font/Lato-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'LatoR';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Lato Regular'), local('Lato-Regular');
+	src: url(../font/Lato-Regular.eot);
+	src: url(../font/Lato-Regular.eot?#iefix) format('embedded-opentype'),
+	     url(../font/Lato-Regular.woff2) format('woff2'),
+         url(../font/Lato-Regular.woff) format('woff'),
+		 url(../font/Lato-Regular.ttf) format('truetype');
+}
+
+@font-face { font-family: 'GmarketSansBold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+
+/*common-text*/
+.demi { font-family: 'Ntdl', Sans-serif; font-weight:normal; }
+.titfont { font-family: 'NtdM', Sans-serif; font-weight:normal; }
+.gfontb { font-family: 'GmarketSansBold'; font-weight: normal; font-style: normal; letter-spacing:0; }
+.numfontB { font-family: 'LatoB', Sans-serif; letter-spacing:0; }
+.numfontR { font-family: 'LatoR', Sans-serif; letter-spacing:0; }
+.basic { font-family: AppleSDGothicNeo, HelveticaNeue,'Droid Sans','Malgun Gothic','맑은 고딕',sans-serif; }/* Dotum,'돋움',Helvetica,sans-serif;*/
