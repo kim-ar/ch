@@ -7,181 +7,164 @@
 <title>합리적인 도매, 천유닷컴</title>
 <link rel="stylesheet" type="text/css" href="../css/base.css">
 <link rel="stylesheet" type="text/css" href="../css/layout.css">
-
 <style>
-
+  .optbox-cart-price .bf-price { font-size:12px !important; text-decoration:line-through; margin-right:4px; }
 </style>
 </head>
 
 <body>
-<div id="wrap">
+  <div id="wrap">
     <header>
-	    <div id="hdwrap">
-			  <div class="sub-top">
-                  <a href="" class="backicon" onclick="history.back()"><img src="../img/common/back_icon.svg"></a>
-                  <h3 class="">장바구니</h3>
+      <div id="hdwrap">
+        <div class="sub-top">
+          <a href="" class="backicon" onclick="history.back()"><img src="../img/common/back_icon.svg"></a>
+          <h3 class="">장바구니</h3>
+        </div>
+      </div>
+    </header>
+    <section id="">
+      <div class="cartwrap">
+        <div class="cartlist">
+          <div class="top-del">
+            <span class="selectckd">
+              <input type="checkbox" id="all-selec" checked>
+              <label for="all-selec"><em class="titfont">전체선택</em></label>
+            </span>
+            <span class="selec-del"><button type="">선택삭제</button></span>
+          </div>
+          <div class="cartlist-pdbox">
+            <div class="cartlist-box">
+              <div class="cartlist-box-item">
+                <span class="cartlist-thumb"><img src="../img/product/thumb/thumb02.jpg" alt=""></span>
+                <div class="item-tit">
+                  <h5 class="titfont"><span class="item-brd">바이풀디자인</span>원데이 스터디 플래너-3times(공시생 취준생 3개월)</h5>
+                  <p><span>상품번호 : <em class="numfontR">48745</em></span><span>바코드 : <em
+                        class="numfontR">880203512698</em></span></p>
+                </div>
               </div>
-		</div>
-	</header>
-	<section id="">
-          <div class="cartwrap">
-				
-		        <div class="cartlist">
-				     <div class="top-del">
-					       <span class="selectckd">
-						       <input type="checkbox" id="all-selec" checked>
-							   <label for="all-selec"><em class="titfont">전체선택</em></label>
-						   </span>
-                           <span class="selec-del"><button type="">선택삭제</button></span>
-					 </div>
-				     <div class="cartlist-pdbox">
-						       <div class="cartlist-box">
-							            <div class="cartlist-box-item">
-										      <span class="cartlist-thumb"><img src="../img/product/thumb/thumb02.jpg" alt=""></span>
-											  <div class="item-tit">
-											      <h5 class="titfont"><span class="item-brd">바이풀디자인</span>원데이 스터디 플래너-3times(공시생 취준생 3개월)</h5>
-												  <p><span>상품번호 : <em class="numfontR">48745</em></span><span>바코드 : <em class="numfontR">880203512698</em></span></p>
-											  </div>
-										 </div>
-										 <div class="pd-opt-wrap">
-										             <span class="item-ckd selectckd" style="">
-														  <input type="checkbox" id="del-ckd01" checked>
-														  <label for="del-ckd01">선택</label>
-													 </span>
-													 <div class="cartlist-box-opt">
-														  <em class="titfont">옵션:</em> 01.버건디
-													 </div>
-													 <div class="cartlist-box-amount">
-															 <div class="optbox-cart-opt">
-																 <input type="text" class="optnum" value="1"><button class="down"></button><button class="up"></button>
-																 <em class="dc numfontR">33%</em>
-															</div>
-															<span class="optbox-cart-price"><em class="numfontB">4,700</em>원</span>
-															<a class="opt-delete"><img src="../img/delicon.svg"></a>
-													 </div>
-							               </div>
-										   <div class="pd-opt-wrap">
-										             <span class="item-ckd selectckd" style="">
-														  <input type="checkbox" id="del-ckd01" checked>
-														  <label for="del-ckd01">선택</label>
-													 </span>
-													 <div class="cartlist-box-opt">
-														  <em class="titfont">옵션:</em> 01.버건디
-													 </div>
-													 <div class="cartlist-box-amount">
-															 <div class="optbox-cart-opt">
-																 <input type="text" class="optnum" value="1"><button class="down"></button><button class="up"></button>
-																 <em class="dc numfontR">33%</em>
-															</div>
-															<span class="optbox-cart-price"><em class="numfontB">4,700</em>원</span>
-															<a class="opt-delete"><img src="../img/delicon.svg"></a>
-													 </div>
-							               </div>
-							   </div>
-							   <div class="cartlist-box last"> 
-										 <div class="cartlist-box-item">
-										      <span class="cartlist-thumb"><img src="../img/product/thumb/47822_1578027485.jpg" alt=""></span>
-											  <div class="item-tit">
-											      <h5 class="titfont"><span class="item-brd">바이풀디자인</span>원데이 스터디 플래너</h5>
-												  <p><span>상품번호 : <em class="numfontR">48745</em></span><span>바코드 : <em class="numfontR">880203512698</em></span></p>
-											  </div>
-										 </div>
-										 <style>
-										 .pd-opt-wrap02 { position:relative; overflow:hidden; background:#f3f6f8; padding:8px 10px 8px 35px; margin-bottom:8px; }
-										 .pd-opt-wrap02 .item-ckd { position:absolute; top:10px; left:8px; }
-										 .pd-opt-wrap02 .cartlist-box-opt { float:left; padding-top:5px; }
-										  .pd-opt-wrap02 .cartlist-box-amount { float:right; }
-										  .pd-opt-wrap02 .cartlist-box-amount .optbox-cart-opt button { background:#f9f9f9; }
-										  .pd-opt-wrap02 .cartlist-box-amount .optbox-cart-price { padding:0 0 0 10px; }
-										 </style>
-										 <div class="pd-opt-wrap02">
-												 <span class="item-ckd selectckd" style="">
-													  <input type="checkbox" id="del-ckd01" checked>
-													  <label for="del-ckd01">선택</label>
-												 </span>
-												 <div class="cartlist-box-opt">
-														  <em class="titfont">옵션:</em> 01.버건디
-												  </div>
-												  <div class="cartlist-box-amount">
-															 <div class="optbox-cart-opt">
-																 <input type="text" class="optnum" value="1"><button class="down"></button><button class="up"></button>
-																 <em class="dc numfontR">33%</em>
-															</div>
-															<span class="optbox-cart-price"><em class="numfontB">4,700</em>원</span>
-													 </div>
-										  </div>
-										   <div class="pd-opt-wrap02">
-												 <span class="item-ckd selectckd" style="">
-													  <input type="checkbox" id="del-ckd01" checked>
-													  <label for="del-ckd01">선택</label>
-												 </span>
-												 <div class="cartlist-box-opt">
-														  <em class="titfont">옵션:</em> 01.버건디
-												  </div>
-												  <div class="cartlist-box-amount">
-															 <div class="optbox-cart-opt">
-																 <input type="text" class="optnum" value="1"><button class="down"></button><button class="up"></button>
-																 <em class="dc numfontR">33%</em>
-															</div>
-															<span class="optbox-cart-price"><em class="numfontB">4,700</em>원</span>
-													 </div>
-										  </div>
+              <div class="pd-opt-wrap">
+                <span class="item-ckd selectckd" style="">
+                  <input type="checkbox" id="del-ckd01" checked>
+                  <label for="del-ckd01">선택</label>
+                </span>
+                <div class="cartlist-box-opt">
+                  <em class="titfont">옵션:</em> 01.버건디
+                </div>
+                <div class="cartlist-box-amount">
+                  <div class="optbox-cart-opt">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                    <em class="dc numfontR">33%</em>
+                  </div>
+                  <span class="optbox-cart-price"><em class="bf-price numfontR">10,400원</em><em class="numfontB">4,700</em>원</span>
+                  <a class="opt-delete"><img src="../img/delicon.svg"></a>
+                </div>
+              </div>
+              <div class="pd-opt-wrap">
+                <span class="item-ckd selectckd" style="">
+                  <input type="checkbox" id="del-ckd01" checked>
+                  <label for="del-ckd01">선택</label>
+                </span>
+                <div class="cartlist-box-opt">
+                  <em class="titfont">옵션:</em> 01.버건디
+                </div>
+                <div class="cartlist-box-amount">
+                  <div class="optbox-cart-opt">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                    <em class="dc numfontR">33%</em>
+                  </div>
+                  <span class="optbox-cart-price"><em class="bf-price numfontR">10,400원</em><em class="numfontB">4,700</em>원</span>
+                  <a class="opt-delete"><img src="../img/delicon.svg"></a>
+                </div>
+              </div>
+            </div>
+            <div class="cartlist-box last">
+              <div class="cartlist-box-item">
+                <span class="cartlist-thumb"><img src="../img/product/thumb/47822_1578027485.jpg" alt=""></span>
+                <div class="item-tit">
+                  <h5 class="titfont"><span class="item-brd">바이풀디자인</span>원데이 스터디 플래너</h5>
+                  <p><span>상품번호 : <em class="numfontR">48745</em></span><span>바코드 : <em
+                        class="numfontR">880203512698</em></span></p>
+                </div>
+              </div>
+              <div class="pd-opt-wrap">
+                <span class="item-ckd selectckd" style="">
+                  <input type="checkbox" id="del-ckd01" checked>
+                  <label for="del-ckd01">선택</label>
+                </span>
+                <div class="cartlist-box-opt">
+                  <em class="titfont">옵션:</em> 01.버건디
+                </div>
+                <div class="cartlist-box-amount">
+                  <div class="optbox-cart-opt">
+                    <input type="text" class="optnum" value="1"><button class="down"></button><button
+                      class="up"></button>
+                    <em class="dc numfontR">33%</em>
+                  </div>
+                  <span class="optbox-cart-price"><em class="bf-price numfontR">10,400원</em><em class="numfontB">4,700</em>원</span>
+                  <a class="opt-delete"><img src="../img/delicon.svg"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="top-del">
+            <span class="selectckd">
+              <input type="checkbox" id="all-selec" checked>
+              <label for="all-selec"><em class="titfont">전체선택</em></label>
+            </span>
+            <span class="selec-del"><button type="">선택삭제</button></span>
+          </div>
+        </div>
 
-							   </div>
-					 </div>
-					 <div class="top-del">
-					       <span class="selectckd">
-						       <input type="checkbox" id="all-selec" checked>
-							   <label for="all-selec"><em class="titfont">전체선택</em></label>
-						   </span>
-                           <span class="selec-del"><button type="">선택삭제</button></span>
-					 </div>
-				</div>
-		         
-                <div class="cart-total">
-					 
-					 <div class="buybox-bot">
-							   <dl>
-								   <dt class="titfont">총 수량</dt>
-								   <dd><em class="numfontB">11</em>개</dd>
-							   </dl>
-							   <dl>
-								   <dt class="titfont">총 상품금액</dt>
-								   <dd><em class="numfontB">63,500</em>원</dd>
-							   </dl>
-							   <dl>
-								   <dt class="titfont">배송비</dt>
-								   <dd>+<em class="numfontB">2,500</em>원</dd>
-							   </dl>
-							   <dl>
-								   <dt class="titfont">추가배송비</dt>
-								   <dd>+<em class="numfontB">0</em>원</dd>
-							   </dl>
-							   <dl class="total">
-								   <dt class="titfont">총 결제 예정 금액</dt>
-								   <dd class="rd"><em class="numfontB">66,000</em>원</dd>
-							   </dl>
-					  </div>
-					  <div class="buybox-bot-btn"><button class="common-next-btn">구매하기</button></div>
-                 </div>
-				 <div class="cart-ntc">
-				      <ul>
-					       <li class="titfont">장바구니에 담긴 상품은 30일간 보관됩니다.</li>
-						   <li>도매회원은 200,000원 미만 시 배송비 2,500원입니다.</li>
-						   <li>배송소요기간 <p>위 상품은 휴일과 일요일 주문의 경우 그 다음 날 상품 준비가 시작되며, 배송기간은 주문 완료일로부터 도매회원은 1~3일의 배송기간이(주말/공휴일 제외) 소요되며, 반품 기간은 상품 수령 후 7일 이내입니다.</p></li>
-					  </ul>
-				</div>
-				 <div class="buybox-bot-txt">
-				       <div>
-					       <p>일부 주문상품중 배송정책 기준에 벗어나거나 포장박스에 들어가지 않는 상품의 경우 묶음배송 불가 또는 추가배송비가 부가될 수 있으니 참고바랍니다.<span>1) 유리관련 제품, 우산, 데스크패드, 식음료 등 포장에 어려움이 있거나 초대형 부피의 경우</span><span>2) 5박스로 출고되는 경우 20만원 이상 주문시 배송비가 0원이며, 도서산간 추가 비용은 5번 부가됩니다.</span></p>
-					   </div>
-				 </div>
+        <div class="cart-total">
 
-				
-		  </div>
-	</section>
+          <div class="buybox-bot">
+            <dl>
+              <dt class="titfont">총 수량</dt>
+              <dd><em class="numfontB">11</em>개</dd>
+            </dl>
+            <dl>
+              <dt class="titfont">총 상품금액</dt>
+              <dd><em class="numfontB">63,500</em>원</dd>
+            </dl>
+            <dl>
+              <dt class="titfont">배송비</dt>
+              <dd>+<em class="numfontB">2,500</em>원</dd>
+            </dl>
+            <dl>
+              <dt class="titfont">추가배송비</dt>
+              <dd>+<em class="numfontB">0</em>원</dd>
+            </dl>
+            <dl class="total">
+              <dt class="titfont">총 결제 예정 금액</dt>
+              <dd class="rd"><em class="numfontB">66,000</em>원</dd>
+            </dl>
+          </div>
+          <div class="buybox-bot-btn"><button class="common-next-btn">구매하기</button></div>
+        </div>
+        <div class="cart-ntc">
+          <ul>
+            <li class="titfont">장바구니에 담긴 상품은 30일간 보관됩니다.</li>
+            <li>도매회원은 200,000원 미만 시 배송비 2,500원입니다.</li>
+            <li>배송소요기간 <p>위 상품은 휴일과 일요일 주문의 경우 그 다음 날 상품 준비가 시작되며, 배송기간은 주문 완료일로부터 도매회원은 1~3일의 배송기간이(주말/공휴일 제외) 소요되며, 반품
+                기간은 상품 수령 후 7일 이내입니다.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="buybox-bot-txt">
+          <div>
+            <p>일부 주문상품중 배송정책 기준에 벗어나거나 포장박스에 들어가지 않는 상품의 경우 묶음배송 불가 또는 추가배송비가 부가될 수 있으니 참고바랍니다.<span>1) 유리관련 제품, 우산,
+                데스크패드, 식음료 등 포장에 어려움이 있거나 초대형 부피의 경우</span><span>2) 5박스로 출고되는 경우 20만원 이상 주문시 배송비가 0원이며, 도서산간 추가 비용은 5번
+                부가됩니다.</span></p>
+          </div>
+        </div>
 
 
-</div>
+      </div>
+    </section>
+
+
+  </div>
 </body>
 </html>

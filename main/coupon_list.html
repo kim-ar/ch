@@ -10,84 +10,83 @@
 
 
 <style>
-
-</style>
-
+.mycouponbox { padding:15px 20px; }
+.mycouponbox .couponbox { margin-bottom:0; }
+.cp-use-tit { font-size:14px; padding-bottom:5px; }
+.cp-use-price { font-size:24px; }
+.cp-use-price em { padding-left:5px; }
+.cp-state { font-size:14px; }
+.cp-state em { display:block; width:54px; padding:3px 0; border:#eee solid 1px; border-radius:10px; margin:6px auto 0 auto; font-size:11px; text-align:center;} 
+.coupon-list { width:100%; overflow:hidden; background:#fff; min-height:calc(100vh - 120px); }
+.date-sch { font-size:0; border-bottom:#e0e0e0 solid 1px; padding:15px 0; }
+.coupon-uselist ul li { padding:15px 20px; border-bottom:#eee solid 1px; }
+.coupon-uselist ul li > div { display:table; width:100%; }
+.coupon-uselist ul li > span { display:block; color:#888; padding-bottom:8px; font-size:12px; }
+.coupon-uselist ul li > div > p { display:table-cell; vertical-align:middle; }
+.coupon-uselist ul li > div > p.coupon-uselist-state { text-align:right; }
+.coupon-uselist ul li > div > p.coupon-uselist-state em { padding:4px 8px; font-size:12px; border-radius:13px; color:#999; }
+.coupon-uselist ul li > div > p.coupon-uselist-state em.use-on { border:#28369c solid 1px; color:#1d34aa; }
+.coupon-uselist ul li > div > p.coupon-uselist-state em.use-off { border:#ddd solid 1px; color:#999; }
+.coupon-uselist ul li > div > p.coupon-uselist-price span { display:block; }
+.cp-price { font-size:18px; padding-bottom:3px; }
+.cp-left-price em { margin-left:4px; }
 </style>
 </head>
 
 <body>
-<div id="wrap">
+  <div id="wrap">
     <header>
-	    <div id="hdwrap">
-			  <div class="sub-top">
-                  <a href="" class="backicon" onclick="history.back()"><img src="../img/common/back_icon.svg"></a>
-                  <h3 class="">상품권 구매</h3>
-              </div>
-		</div>
-	</header>
-	<section>
-	      <!--상품권 탬-->
-		  <div class="copon-tab cattop-tab">
-              <span class="tabline">상품권</span>
-			  <span class="selected02">상품권 내역</span>
-         </div>
-
-	      <div class="bg-container">
-		        
-		   <!--상품권내역-->
-		   <style>
-		   .couponboxlistwrap { padding:15px 20px; }
-		   .couponbox-end .couponbox-col02 { background:#999; }
-		   .mycouponbox .couponbox-col01 h5 { border-bottom:#eee solid 1px; margin-bottom:10px; }
-		   .cp-buy-date { display:block; padding-bottom:2px; color:#777; }
-		   .cp-deposit em { display:inline-block; font-size:15px; }
-		   .cp-deposit { display:block; margin-right:5px; font-size:12px; }
-		   .cp-state { font-size:14px; }
-		   .cp-state em { display:block; width:54px; padding:3px 0; border:#eee solid 1px; border-radius:10px; margin:6px auto 0 auto; font-size:11px; text-align:center; }
-		   </style>
-		         <div class="my-point">
-				      <p>
-						   <span class="my-point-tit titfont"><img src="../img/coupon_icon.svg">사용 가능한 금액</span>
-						   <span class="my-point-num"><em class="numfontB">2,200,000</em>원</span>
-					  </p>
-			    </div>
-
-				 <div class="couponboxlistwrap couponboxwrap">
-                              <div class="mycouponbox couponbox">
-									<div class="couponbox-col01">
-										 <span class="cp-buy-date basic">2019.08.23</span>
-										 <h5 class="numfontB">1,000,000</h5>
-										 <p class="cp-deposit"><em class="">남은금액</em><em class="numfontB">259,000</em></p>
-									</div>
-									<div class="couponbox-col02">
-										<p class="cp-state titfont">사용<em class="basic">환불가능</em></p>
-									</div>
-							  </div>
-							  <div class="mycouponbox couponbox">
-									<div class="couponbox-col01">
-										 <span class="cp-buy-date basic">2019.08.23</span>
-										 <h5 class="numfontB">1,000,000</h5>
-										 <p class="cp-deposit"><em class="">남은금액</em><em class="numfontB">1,000,000</em></p>
-									</div>
-									<div class="couponbox-col02">
-										<p class="cp-state titfont">미사용<em class="basic">환불가능</em></p>
-									</div>
-							  </div>
-							  <div class="couponbox couponbox-end">
-									<div class="couponbox-col01">
-										 <span class="cp-buy-date basic">2019.08.23</span>
-										 <h5 class="numfontB">500,000</h5>
-									</div>
-									<div class="couponbox-col02">
-										<p class="cp-state titfont">사용완료<em class="basic">환불불가</em></p>
-									</div>
-							  </div>
-					</div>
+      <div id="hdwrap">
+        <div class="sub-top">
+          <a href="" class="backicon" onclick="history.back()"><img src="../img/common/back_icon.svg"></a>
+          <h3 class="">상품권</h3>
+        </div>
+      </div>
+    </header>
+    <section>
+      <!--상품권 탭-->
+      <div class="copon-tab cattop-tab">
+        <span class="tabline">상품권</span>
+        <span class="selected02">상품권 내역</span>
+      </div>
+      <div class="bg-container">
+        <div class="mycouponbox couponboxwrap">
+          <div class="couponbox">
+            <div class="couponbox-col01">
+              <h3 class="cp-use-tit titfont">사용 가능한 금액</h3>
+              <span class="cp-use-price"><img src="../img/coupon_icon.svg"><em class="numfontB">2,200,000</em></span>
+            </div>
+            <div class="couponbox-col02">
+              <p class="cp-state titfont">사용중</p>
+            </div>
           </div>
-	</section>
+        </div>
+        <div class="coupon-list">
+          <div class="coupon-uselist">
+            <ul>
+              <li>
+                <span class="date basic">2019.03.20 11:53</span>
+                <div class="">
+                  <p class="coupon-uselist-price"><span class="cp-price numfontB">2,000,000</span><span
+                      class="cp-left-price">남은금액<em class="numfontB">1,950,330</em></span></p>
+                  <p class="coupon-uselist-state"><em class="use-on basic">사용가능</em></p>
+                </div>
+              </li>
+              <li>
+                <span class="date basic">2019.03.20 11:53</span>
+                <div class="">
+                  <p class="coupon-uselist-price"><span class="cp-price numfontB">500,000</span><span
+                      class="cp-left-price">남은금액<em class="numfontR">0</em></span></p>
+                  <p class="coupon-uselist-state"><em class="use-off basic">사용완료</em></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
-</div>
+  </div>
 </body>
 </html>
