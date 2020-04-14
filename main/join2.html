@@ -12,6 +12,10 @@
 .form-m-tit { display:block; color:#555; padding:5px 0 6px 2px; font-size:14px; }
 .form-m-tit .titfont { position:relative;  display:inline-block; }
 .form-m-tit .titfont .gnb-new { top:1px; width:3px; height:3px; }
+.type-form { border-top:#ddd solid 1px; padding:10px 0; }
+.type-form .joinboxwrap { border:0; }
+.type-form ul { display:block !important; padding:0;}
+.joinboxwrap .joinboxform .sel-tel02 { width:33%; margin-right:0.3%; }
 </style>
 </head>
 
@@ -27,7 +31,6 @@
     </header>
     <section>
       <div id="">
-        <div class=""></div>
         <div class="joinboxwrap">
           <h5 class="titfont">필수정보</h5>
           <ul class="joinboxform">
@@ -79,6 +82,7 @@
                   <option>daum.net</option>
                   <option>hanmail.net</option>
                   <option>nate.com</option>
+                  <option>직접입력</option>
                 </select></span>
             </li>
             <li class="adr space">
@@ -102,12 +106,45 @@
                 <li><a>일반사무실</a></li>
                 <li><a>기타</a></li>
               </ul>
-              <!--사업자정보폼-->
-              <div class="type-form">
-                
-              </div>
-              <!--사업자정보폼 끝-->
             </div>
+            <!--사업자정보폼/누르면나오는폼-->
+            <div class="type-form">
+              <div class="joinboxwrap">
+                <ul class="joinboxform">
+                  <li>
+                    <p class="form-m-tit"><em class="titfont">상호(법인명)<em class="gnb-new"></em></em></p><span><input type="text" class="" placeholder="이름"></span>
+                  </li>
+                  <li>
+                    <p class="form-m-tit"><em class="titfont">대표자<em class="gnb-new"></em></em></p><span><input type="text" class="" placeholder="대표자명"></span>
+                  </li>
+                  <li>
+                    <p class="form-m-tit"><em class="titfont">사업자등록번호<em class="gnb-new"></em></em></p><span><input type="text" class="sel-tel02"><input type="text" class="sel-tel02"><input type="text" class="sel-tel02"></span>
+                  </li>
+                  <li>
+                    <p class="form-m-tit"><em class="titfont">이메일<em class="gnb-new"></em></em></p><span><input type="text"
+                        class="ipt-em" placeholder="필수 정보와 동일시 공백"><em class="emgol">@</em><select name=""
+                        class="sel-tel-em sel-tel">
+                        <option>선택</option>
+                        <option>naver.com</option>
+                        <option>daum.net</option>
+                        <option>hanmail.net</option>
+                        <option>nate.com</option>
+                        <option>직접입력</option>
+                      </select></span>
+                  </li>
+                  <li class="adr space">
+                    <p class="form-m-tit"><em class="titfont">주소<em class="gnb-new"></em></em></p><span><input type="text" class="ipt-id" placeholder="우편번호"><button type="" class="ipt-id-ckd">주소검색</button></span><span><input type="text" placeholder="주소"></span><span><input type="text" placeholder="나머지 주소"></span>
+                  </li>
+                  <li>
+                    <p class="form-m-tit"><em class="titfont">종목/업태<em class="gnb-new"></em></em></p><span><input type="text" class="" placeholder="종목/업태"></span>
+                  </li>
+                  <li>
+                    <p class="form-m-tit"><em class="titfont">회사 홈페이지 주소<em class="gnb-new"></em></em></p><span><input type="text" class="" placeholder="예) www.cheonyu.com"></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--사업자정보폼 끝-->
           </div>
         </div>
         <div class="joinboxwrap">

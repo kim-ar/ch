@@ -7,83 +7,190 @@
 <title>합리적인 도매, 천유닷컴</title>
 <link rel="stylesheet" type="text/css" href="../css/base.css">
 <link rel="stylesheet" type="text/css" href="../css/layout.css">
-<link rel="stylesheet" href="../css/swiper.min.css">
-<script src="../js/jquery-1.11.0.min.js"></script>
-<script src="../js/modernizr.custom.js"></script>
-<script src="../js/gnb.js"></script>
 
 <style>
-/**/
+/*search*/
+.schwrap { width:100%; overflow:hidden; background:#fff; }
 .schwrap .sub-top { height:auto; }
 .schwrap .sub-top .backicon { top:24px; }
 .schpage-top { padding:13px 15px 13px 45px; }
 .schpage-top .t-sch { width:100%; overflow:hidden; }
 .schpage-top .t-sch > span { display:inline-block; }
 
-.schpage-contents ul {}
-.schpage-contents .sch-list-brd li { border-bottom:#e0e0e0 solid 1px; }
-.schpage-contents ul li { border-bottom:#eee solid 1px; }
-.schpage-contents ul li > div { padding:15px 20px; }
-.schpage-contents ul li > div > span { display:inline-block; font-size:14px; }
-.sch-list-brd li > div .keytxt { font-size:15px; line-height:24px; }
-.keytxt { color:#1b3bb5; padding-right:3px; }
-.schbrdwrap { color:#1b3bb5; line-height:20px; vertical-align:top; border:#1b3bb5 solid 1px; padding:0 8px; border-radius:12px; margin-right:5px; font-size:12px !important; font-weight:bold; }
+/*search page*/
+.sch-res-brd { display:table; padding:20px; }
+.sch-res-brd > div { display:table-cell; position:relative; }
+.sch-res-brd > div.brd-thumb img {}
 </style>
 </head>
 
 <body>
   <div id="wrap">
-    <header>
-      <div id="hdwrap">
-
-      </div>
-    </header>
     <section>
-      <div class="schwrap">
-        <div class="sub-top">
-          <a href="" class="backicon" onclick="history.back()"><img src="../img/common/back_icon.svg"></a>
-          <div class="schpage-top">
-            <div class="t-sch">
-              <span class="in-sch">
-                <input type="text" placeholder="검색어를 입력해주세요"><button class="keywordbtn"><img src="../img/sch_icon.svg"
-                    alt="검색"></button>
-              </span>
+        <div class="schwrap">
+          <div class="sub-top">
+            <a href="" class="backicon" onclick="history.back()"><img src="../img/common/back_icon.svg"></a>
+            <div class="schpage-top">
+              <div class="t-sch">
+                <span class="in-sch">
+                  <input type="text" placeholder="검색어를 입력해주세요"><button class="keywordbtn"><img src="../img/sch_icon.svg" alt="검색"></button>
+                </span>
+              </div>
             </div>
           </div>
         </div>
-        <!--검색시 나오는 검색어 리스트-->
-        <div class="schpage-contents">
-          <ul class="sch-list-brd">
-            <li>
-              <div>
-                <span class="schbrdwrap basic">브랜드</span>
-                <span class="keytxt">흔한남매</span>
-              </div>
-            </li>
-          </ul>
-          <ul class="sch-list-keyword">
-            <li>
-              <div><span class="keytxt">흔한남매</span></div>
-            </li>
-            <li>
-              <div><span class="keytxt">흔한남매</span>종합장</div>
-            </li>
-            <li>
-              <div><span class="keytxt">흔한남매</span>스케치북</div>
-            </li>
-            <li>
-              <div><span class="keytxt">흔한남매</span>귀요미견출지</div>
-            </li>
-            <li>
-              <div><span class="keytxt">흔한남매</span>A4홀더</div>
-            </li>
-          </ul>
+        <div class="">
+          <div class="sch-res-brd">
+            <div class="brd-thumb"><img src="../img/temp/qb07.jpg"></div>
+            <div class=""><h5>인디고</h5><p>브랜드관 바로가기</p></div>
+          </div>
+          <div class="pdlist-toptab">
+            <div class="pdlist-toptab01">총 <span class="numfontB">140</span>개</div>
+            <div class="pdlist-toptab02">
+              <select class="" id="prdSort" title="상품 분류를 선택하세요.">
+                <option value="01" selected="selected">인기순</option>
+                <option value="02">최근등록순</option>
+                <option value="03">판매수량순</option>
+                <option value="04">낮은 가격순</option>
+                <option value="05">높은 가격순</option>
+              </select>
+            </div>
+            <div class="pdlist-toptab03">
+              <button type="button" class=""><img src="../img/view_icon.svg" style="width:20px;"></button>
+            </div>
+          </div>
+          <div class="pdconlist">
+            <ul class="lists">
+              <li>
+                <div class="pdlist-thumb"><img src="../img/product/thumb/thumb02.jpg" alt=""></div>
+                <div class="pdlist-txt">
+                  <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                  <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                  <div class="pdprice">
+                    <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                    <p class="pdprice-pr">
+                      <span class="pdprice-pr01">25,000원</span>
+                      <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                    </p>
+                  </div>
+                  <div class="pdlist-cart">
+                    <!--<span class="pd-chkbox selectckd" style="">
+                                <input type="checkbox" id="del-ckd01">
+                                <label for="del-ckd01"></label>
+                             </span>-->
+                    <span class="">
+                      <input type="text" class="optnum" value="1"><button class="down"></button><button
+                        class="up"></button>
+                    </span>
+                    <button class="pdlist-cart-btn">담기</button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="pdlist-thumb"><img src="../img/product/thumb/02.jpg" alt=""></div>
+                <div class="pdlist-txt">
+                  <h5 class="pdtit"><span class="brd">[노브랜드]</span>베비랑 물티슈 더블루 캡형(100매)</h5>
+                  <div class="pdprice">
+                    <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                    <p class="pdprice-pr">
+                      <span class="pdprice-pr01">25,000원</span>
+                      <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                    </p>
+                  </div>
+                  <div class="pdlist-cart">
+                    <span class="">
+                      <input type="text" class="optnum" value="1"><button class="down"></button><button
+                        class="up"></button>
+                    </span>
+                    <button class="pdlist-cart-btn">담기</button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="pdlist-thumb"><img src="../img/48648_1582602078.jpg" alt=""></div>
+                <div class="pdlist-txt">
+                  <span class="tag"><em class="tag-new">NEW</em><em class="tag-op">OPTION</em></span>
+                  <h5 class="pdtit"><span class="brd">[마패드]</span>원데이 스터디플래너 - 3Times (공시생 취준생 3개월)</h5>
+                  <div class="pdprice">
+                    <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                    <p class="pdprice-pr">
+                      <span class="pdprice-pr01">25,000원</span>
+                      <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                    </p>
+                  </div>
+                  <div class="pdlist-cart">
+                    <span class="">
+                      <input type="text" class="optnum" value="1"><button class="down"></button><button
+                        class="up"></button>
+                    </span>
+                    <button class="pdlist-cart-btn">담기</button>
+                  </div>
+  
+                </div>
+              </li>
+              <li>
+                <div class="pdlist-thumb"><img src="../img/product/thumb/03.jpg" alt=""></div>
+                <div class="pdlist-txt">
+                  <span class="tag numfontB"><em class="tag-new numfontB">NEW</em><em
+                      class="tag-op gfont">OPTION</em></span>
+                  <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                  <div class="pdprice">
+                    <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                    <p class="pdprice-pr">
+                      <span class="pdprice-pr01">25,000원</span>
+                      <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                    </p>
+                  </div>
+                  <div class="pdlist-cart">
+                    <span class="">
+                      <input type="text" class="optnum" value="1"><button class="down"></button><button
+                        class="up"></button>
+                    </span>
+                    <button class="pdlist-cart-btn">담기</button>
+                  </div>
+                </div>
+              </li>
+  
+              <!---->
+              <li>
+                <div class="pdlist-thumb"><img src="../img/product/thumb/04.jpg" alt=""></div>
+                <div class="pdlist-txt">
+                  <span class="tag numfontB"><em class="tag-new numfontB">NEW</em><em
+                      class="tag-op gfont">OPTION</em></span>
+                  <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                  <div class="pdprice">
+                    <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                    <p class="pdprice-pr">
+                      <span class="pdprice-pr01">25,000원</span>
+                      <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                    </p>
+                  </div>
+                  <div class="pdlist-cart">
+                    <span class="">
+                      <input type="text" class="optnum" value="1"><button class="down"></button><button
+                        class="up"></button>
+                    </span>
+                    <button class="pdlist-cart-btn">담기</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="page">
+            <span class="pg-prev-end"><a href="#"></a></span>
+            <span class="pg-prev"><a href="#"></a></span>
+            <span class="page_number">
+              <a href="#" class="page_now numfontR">1</a>
+              <a href="#" class="numfontR">2</a>
+              <a href="#" class="numfontR">3</a>
+              <a href="#" class="numfontR">4</a>
+              <a href="#" class="numfontR">5</a>
+            </span>
+            <span class="pg-next-end"><a href="#"></a></span>
+            <span class="pg-next"><a href="#"></a></span>
+          </div>
         </div>
-
-      </div>
     </section>
-
-
   </div>
 </body>
 </html>
