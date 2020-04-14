@@ -194,7 +194,7 @@ section { width:100%; overflow:hidden; }
 .pdinfo-top .brd-go { display:inline-block; color:#888; padding:7px 12px 7px 0; background:url(../img/common/more.png) no-repeat right 10px; background-size:8px 8px; }
 /*.pdinfo-top .brd-go { display:inline-block; color:#888; border:#ccc solid 1px; line-height:24px; border-radius:14px; padding:0 8px; margin:7px 0 10px -3px; }*/
 .pdinfo-top h3 { font-size:20px; padding:0 10px 10px 0; overflow:hidden; }
-.pdinfo-top .tag { display:inline-block; margin-left:5px; vertical-align:top; height:auto; line-height:18px; }
+.pdinfo-top .tag { display:inline-block; margin-left:5px; vertical-align:top; }
 .pdinfo-slide ul li img { width:100%; }
 
 .pdinfo-price .top-price { padding:15px 5px 10px 5px; margin:0 15px; border-bottom:#000 solid 1px; }
@@ -711,9 +711,11 @@ section { width:100%; overflow:hidden; }
 .thumb-best-tag em { display:block; color:#fff; opacity:1; }
 .thumb-best-tag .tag-txt { font-size:10px; padding-top:4px; }
 .thumb-best-tag .tag-num { font-size:14px; }
-.etc-ntc { padding:18px 20px; }
-.etc-ntc ul li { margin-top:6px; }
-.etc-ntc ul li:first-child { color:#555; }
+.etc-ntc { padding:18px 20px; background:#fff; margin-bottom:10px; overflow:hidden; }
+.etc-ntc ul li { margin-top:6px ;position:relative; color:#555; padding-left:10px; }
+.etc-ntc ul li:first-child { color:#555;margin-top:0; }
+.etc-ntc ul li:before { position:absolute; width:2px; height:2px; top:7px; left:3px; background:#bbb; content:""; }
+.etc-ntc ul li p { font-size:12px; padding-top:3px; color:#777; line-height:1.5; }
 .qb-brd-bullet .swiper-pagination-bullet { width:6px; height:6px; }
 /*checkbox*/
 .selectckd { display:inline-block; }

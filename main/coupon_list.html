@@ -16,20 +16,16 @@
 .cp-use-price { font-size:24px; }
 .cp-use-price em { padding-left:5px; }
 .cp-state { font-size:14px; }
-.cp-state em { display:block; width:54px; padding:3px 0; border:#eee solid 1px; border-radius:10px; margin:6px auto 0 auto; font-size:11px; text-align:center;} 
-.coupon-list { width:100%; overflow:hidden; background:#fff; min-height:calc(100vh - 120px); }
-.date-sch { font-size:0; border-bottom:#e0e0e0 solid 1px; padding:15px 0; }
+.cp-state em { display:block; width:54px; padding:3px 0; border:#eee solid 1px; border-radius:10px; margin:6px auto 0 auto; font-size:11px; text-align:center; } 
+
+.coupon-list { width:100%; overflow:hidden; background:#fff; min-height:calc(100vh - 120px); border-top:#eee solid 1px; }
 .coupon-uselist ul li { padding:15px 20px; border-bottom:#eee solid 1px; }
 .coupon-uselist ul li > div { display:table; width:100%; }
-.coupon-uselist ul li > span { display:block; color:#888; padding-bottom:8px; font-size:12px; }
-.coupon-uselist ul li > div > p { display:table-cell; vertical-align:middle; }
-.coupon-uselist ul li > div > p.coupon-uselist-state { text-align:right; }
-.coupon-uselist ul li > div > p.coupon-uselist-state em { padding:4px 8px; font-size:12px; border-radius:13px; color:#999; }
-.coupon-uselist ul li > div > p.coupon-uselist-state em.use-on { border:#28369c solid 1px; color:#1d34aa; }
-.coupon-uselist ul li > div > p.coupon-uselist-state em.use-off { border:#ddd solid 1px; color:#999; }
-.coupon-uselist ul li > div > p.coupon-uselist-price span { display:block; }
-.cp-price { font-size:18px; padding-bottom:3px; }
-.cp-left-price em { margin-left:4px; }
+.coupon-list .date-sch { font-size:0; border-bottom:#e0e0e0 solid 1px; padding:15px 0; }
+.coupon-list .date-sch span { display:inline-block; width:50%; }
+.coupon-list .date-sch span select { font-size:15px; width:100%; padding:8px 20px; background:#fff url(../img/common/downicon.svg) no-repeat right 15px center !important; outline:0; }
+.coupon-list .date-sch .point-month { border-left:#eee solid 1px; }
+
 </style>
 </head>
 
@@ -62,22 +58,29 @@
           </div>
         </div>
         <div class="coupon-list">
+          <div class="date-sch">
+            <span class="point-state">
+              <select name="" class="">
+                <option>전체내역</option>
+                <option>적립내역</option>
+                <option>사용내역</option>
+              </select>
+            </span>
+            <span class="point-month">
+              <select name="" class="">
+                <option>2020년 3월</option>
+                <option>2020년 2월</option>
+                <option>2020년 1월</option>
+              </select>
+            </span>
+          </div>
           <div class="coupon-uselist">
             <ul>
               <li>
                 <span class="date basic">2019.03.20 11:53</span>
-                <div class="">
-                  <p class="coupon-uselist-price"><span class="cp-price numfontB">2,000,000</span><span
-                      class="cp-left-price">남은금액<em class="numfontB">1,950,330</em></span></p>
-                  <p class="coupon-uselist-state"><em class="use-on basic">사용가능</em></p>
-                </div>
-              </li>
-              <li>
-                <span class="date basic">2019.03.20 11:53</span>
-                <div class="">
-                  <p class="coupon-uselist-price"><span class="cp-price numfontB">500,000</span><span
-                      class="cp-left-price">남은금액<em class="numfontR">0</em></span></p>
-                  <p class="coupon-uselist-state"><em class="use-off basic">사용완료</em></p>
+                <div class="cp-use-box">
+                     <p class="use-tit">제품구매사용<span>P200410-688113</span></p>
+                     <p class="use-later"><span class="use-later01">-9,100</span><span class="use-later02">2,557,044 </span></p>
                 </div>
               </li>
             </ul>
