@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device=width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<title>합리적인 도매, 천유닷컴</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="../css/layout.css">
+
+<style>
+.loader {
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  transform: rotate(165deg);
+}
+.loader:before, .loader:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 0.25em;
+  transform: translate(-50%, -50%);
+}
+.loader:before {
+  animation: before 2s infinite;
+}
+.loader:after {
+  animation: after 2s infinite;
+}
+
+@keyframes before {
+  0% {
+    width: 0.5em;
+    box-shadow: 1em -0.5em rgba(41, 57, 183, 0.75), -1em 0.5em rgba(41, 57, 183, 0.75);
+  }
+  35% {
+    width: 2.5em;
+    box-shadow: 0 -0.5em rgba(41, 57, 183, 0.75), 0 0.5em rgba(41, 57, 183, 0.75);
+  }
+  70% {
+    width: 0.5em;
+    box-shadow: -1em -0.5em rgba(41, 57, 183, 0.75), 1em 0.5em rgba(41, 57, 183, 0.75);
+  }
+  100% {
+    box-shadow: 1em -0.5em rgba(41, 57, 183, 0.75), -1em 0.5em rgba(41, 57, 183, 0.75);
+  }
+}
+@keyframes after {
+  0% {
+    height: 0.5em;
+    box-shadow: 0.5em 1em rgba(39, 53, 167, 0.75), -0.5em -1em rgba(39, 53, 167, 0.75);
+  }
+  35% {
+    height: 2.5em;
+    box-shadow: 0.5em 0 rgba(39, 53, 167, 0.75), -0.5em 0 rgba(39, 53, 167, 0.75);
+  }
+  70% {
+    height: 0.5em;
+    box-shadow: 0.5em -1em rgba(39, 53, 167, 0.75), -0.5em 1em rgba(39, 53, 167, 0.75);
+  }
+  100% {
+    box-shadow: 0.5em 1em rgba(39, 53, 167, 0.75), -0.5em -1em rgba(39, 53, 167, 0.75);
+  }
+}
+.loader { position: absolute; top: calc(50% - 1.25em); left: calc(50% - 1.25em);
+}
+</style>
+</head>
+
+<body>
+  <div id="wrap">
+   <div class="loader"></div>
+  </div>
+</body>
+</html>
