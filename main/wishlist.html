@@ -12,60 +12,17 @@
     <link rel="stylesheet" type="text/css" href="../css/layout.css" />
 
     <style>
-      .wishlistbox {
-        padding: 15px 20px;
-        background: #fff;
-      }
-      .wlbox {
-        position: relative;
-        overflow: hidden;
-      }
-      .wlbox-sel {
-        position: absolute;
-        display: block;
-        top: 20px;
-        left: 0;
-      }
-      .wlbox-sel input[type="checkbox"] {
-        padding: 0;
-        margin: 0;
-        width: 0;
-        opacity: 0;
-      }
-      .wlbox-sel label {
-        display: block;
-        width: 18px;
-        height: 18px;
-        line-height: 1.8;
-        background: url(../img/c_check_off.svg) no-repeat left top;
-        background-size: 17px 17px;
-      }
-      .wlbox-sel input[type="checkbox"]:checked + label {
-        background: url(../img/c_check_on2.svg) no-repeat left top;
-        background-size: 17px 17px;
-      }
+    .wishlistbox { padding:15px 20px; background:#fff; }
+    .wlbox { position:relative; overflow:hidden; }
+    .wlbox-sel { position:absolute; display:block; top:20px; left:0; }
+    .wlbox-sel input[type="checkbox"] { padding:0; margin:0; width:0; opacity:0; }
+    .wlbox-sel label { display:block; width:18px; height:18px; line-height:1.8; background:url(../img/c_check_off.svg) no-repeat left top; background-size:17px 17px;  }
+    .wlbox-sel input[type="checkbox"]:checked + label { background:url(../img/c_check_on2.svg) no-repeat left top; background-size:17px 17px }
 
-      .wlbox-thumb {
-        position: absolute;
-        top: 0;
-        left: 17px;
-        width: 80px;
-        height: 80px;
-      }
-      .wlbox-thumb img {
-        width: 100%;
-      }
-      .wlbox-detail {
-        padding-left: 100px;
-        height: 80px;
-      }
-      .wlbox-detail h5 {
-        font-size: 14px;
-        display: block;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
+    .wlbox-thumb { position:absolute; top:0; left:17px; width:80px; height:80px; }
+    .wlbox-thumb img { width:100%; }
+    .wlbox-detail { padding-left:100px; height:80px; }
+    .wlbox-detail h5 { font-size:14px; display:block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     </style>
   </head>
 

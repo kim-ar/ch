@@ -16,15 +16,22 @@
 .cp-use-price { font-size:24px; }
 .cp-use-price em { padding-left:5px; }
 .cp-state { font-size:14px; }
-.cp-state em { display:block; width:54px; padding:3px 0; border:#eee solid 1px; border-radius:10px; margin:6px auto 0 auto; font-size:11px; text-align:center; } 
-
+.cp-state span { display:block; width:50px; padding:3px 0; border:#eee solid 1px; border-radius:12px; margin:0 auto; font-size:12px; text-align:center; } 
 .coupon-list { width:100%; overflow:hidden; background:#fff; min-height:calc(100vh - 120px); border-top:#eee solid 1px; }
-.coupon-uselist ul li { padding:15px 20px; border-bottom:#eee solid 1px; }
-.coupon-uselist ul li > div { display:table; width:100%; }
 .coupon-list .date-sch { font-size:0; border-bottom:#e0e0e0 solid 1px; padding:15px 0; }
 .coupon-list .date-sch span { display:inline-block; width:50%; }
 .coupon-list .date-sch span select { font-size:15px; width:100%; padding:8px 20px; background:#fff url(../img/common/downicon.svg) no-repeat right 15px center !important; outline:0; }
 .coupon-list .date-sch .point-month { border-left:#eee solid 1px; }
+.coupon-uselist ul li { padding:15px 20px; border-bottom:#eee solid 1px; }
+.coupon-uselist ul li span.date { color:#999; font-size:12px; }
+.coupon-uselist ul li .cp-use-box { display:table; width:100%; margin-top:8px; }
+.cp-use-box .use-tit, .cp-use-box .use-later { display:table-cell; vertical-align:middle; }
+.cp-use-box .use-tit { font-size:14px; }
+.cp-use-box .use-tit span { display:block; font-size:13px; margin-top:4px; color:#555; }
+.cp-use-box .use-later { text-align:right; }
+.cp-use-box .use-later span { display:block; }
+.cp-use-box .use-later .use-later01 { font-size:16px; margin-bottom:5px; }
+.cp-use-box .use-later .use-later02 { font-size:14px; }
 
 </style>
 </head>
@@ -42,7 +49,7 @@
     <section>
       <!--상품권 탭-->
       <div class="copon-tab cattop-tab">
-        <span class="tabline">상품권</span>
+        <span class="tabline">상품권 구매</span>
         <span class="selected02">상품권 내역</span>
       </div>
       <div class="bg-container">
@@ -53,7 +60,7 @@
               <span class="cp-use-price"><img src="../img/coupon_icon.svg"><em class="numfontB">2,200,000</em></span>
             </div>
             <div class="couponbox-col02">
-              <p class="cp-state titfont">사용중</p>
+              <p class="cp-state titfont"><span class="basic">사용중</span></p>
             </div>
           </div>
         </div>
@@ -62,7 +69,7 @@
             <span class="point-state">
               <select name="" class="">
                 <option>전체내역</option>
-                <option>적립내역</option>
+                <option>구매내역</option>
                 <option>사용내역</option>
               </select>
             </span>
@@ -79,8 +86,22 @@
               <li>
                 <span class="date basic">2019.03.20 11:53</span>
                 <div class="cp-use-box">
-                     <p class="use-tit">제품구매사용<span>P200410-688113</span></p>
-                     <p class="use-later"><span class="use-later01">-9,100</span><span class="use-later02">2,557,044 </span></p>
+                  <p class="use-tit titfont">제품구매사용<span class="basic">P200410-688113</span></p>
+                  <p class="use-later"><span class="use-later01 rd"><em class="numfontB">-9,100</em>원</span><span class="use-later02"><em class="numfontR">2,557,044</em>원</span></p>
+                </div>
+              </li>
+              <li>
+                <span class="date basic">2019.03.20 11:53</span>
+                <div class="cp-use-box">
+                  <p class="use-tit titfont">제품구매사용<span class="basic">P200410-688113</span></p>
+                  <p class="use-later"><span class="use-later01 rd"><em class="numfontB">-9,100</em>원</span><span class="use-later02"><em class="numfontR">2,557,044</em>원</span></p>
+                </div>
+              </li>
+              <li>
+                <span class="date basic">2019.03.20 11:53</span>
+                <div class="cp-use-box">
+                  <p class="use-tit titfont">상품권 구매<span class="basic">P200410-688113</span></p>
+                  <p class="use-later"><span class="use-later01 bf"><em class="numfontB">+500,000</em>원</span><span class="use-later02"><em class="numfontR">2,557,044</em>원</span></p>
                 </div>
               </li>
             </ul>
