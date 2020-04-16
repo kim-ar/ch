@@ -20,11 +20,9 @@
       top: 13px;
       right: 15px;
     }
-
     .smt-alarm ul li span {
       display: block;
     }
-
     /*brandlist*/
     .qb {
       width: 100%;
@@ -34,46 +32,24 @@
       border-top: #f5f6fa solid 10px;
       background: #fff;
     }
-
     .qb-list {
       width: 100%;
     }
-
     .qb-list ul {
       width: 100%;
       overflow: hidden;
       background: #fff;
     }
+    .qb-list ul li {width: 25%;float: left;}
+    .qb-list ul li a {display: block; width: 100%;padding: 10px 0;text-align: center;}
+    .qb-list ul li img {width: 70%;}
+    .qb-list ul li span {display: block; padding-top: 6px;font-size: 11px; color: #666;}
+    .qb .swiper-pagination {bottom: 8px;width: 100%;text-align: center;}
 
-    /* display:flex; display: -webkit-flex; display:-ms-flexbox; flex-wrap:wrap;*/
-    .qb-list ul li {
-      width: 25%;
-      float: left;
-    }
-
-    .qb-list ul li a {
-      display: block;
-      width: 100%;
-      padding: 10px 0;
-      text-align: center;
-    }
-
-    .qb-list ul li img {
-      width: 70%;
-    }
-
-    .qb-list ul li span {
-      display: block;
-      padding-top: 6px;
-      font-size: 11px;
-      color: #666;
-    }
-
-    .qb .swiper-pagination {
-      bottom: 8px;
-      width: 100%;
-      text-align: center;
-    }
+    .sale-top-tab {width:100%; overflow:hidden;background:#102dc3; }
+    .sale-top-tab ul li { float:left; width:33.33%; padding:10px 0;  }
+    .sale-top-tab ul li a { display:block; text-align:center; color:#5a72ee; font-size:14px; border-right:#2341d7 solid 1px; }
+    .sale-top-tab ul li a.selected { color:#eee; }
   </style>
 </head>
 
@@ -83,7 +59,16 @@
     </header>
     <section>
       <div class="bg-container">
-        <div class=""><img src="../img/sale.jpg" style="width:100%;"></div>
+        <div class="sale-top">
+          <img src="../img/sale.jpg" style="width:100%;">
+          <div class="sale-top-tab">
+            <ul>
+              <li><a class="selected">#55땡처리</a></li>
+              <li><a>#최저가</a></li>
+              <li><a>#땡처리</a></li>
+            </ul>
+          </div>
+        </div>
         <div class="qb swiper3">
           <div class="qb-list swiper-wrapper">
             <ul class="swiper-slide">
