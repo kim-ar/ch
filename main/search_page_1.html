@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="../css/layout.css">
 
 <style>
-/*search*/
+/*search.html과 동일*/
 .schwrap { width:100%; overflow:hidden; background:#fff; }
 .schwrap .sub-top { height:auto; }
 .schwrap .sub-top .backicon { top:24px; }
@@ -17,11 +17,14 @@
 .schpage-top .t-sch { width:100%; overflow:hidden; }
 .schpage-top .t-sch > span { display:inline-block; }
 
-/*search page*/
+/*search_page css*/
 .sch-res-brd { position:relative; padding:20px; overflow:hidden; border-bottom:#f5f6fa solid 10px; background:#fff; }
-.sch-res-brd > div.brd-thumb { position:absolute; top:0; left:20px; }
+.sch-res-brd > div.brd-thumb { position:absolute; top:25px; left:20px; }
 .sch-res-brd > div.brd-thumb img { height:35px; }
-.sch-res-brd > div.brd-name h5 { font-size:16px; }
+.sch-res-brd > div.brd-name { padding-left:90px; }
+.sch-res-brd > div.brd-name a { display:block; font-size:16px; }
+.sch-res-brd > div.brd-name span { display:block; position:relative; padding-top:3px; font-size:13px; color:#888; }
+.sch-res-brd > div.brd-name span:after { position:absolute; width:10px; height:10px; top:7px; left:95px; background:url(../img/common/more.png) no-repeat; background-size:10px 10px; content:"";}
 </style>
 </head>
 
@@ -43,7 +46,7 @@
         <div class="">
           <div class="sch-res-brd">
             <div class="brd-thumb"><img src="../img/temp/qb07.jpg"></div>
-            <div class="brd-name"><h5 class="titfont">인디고</h5><p>브랜드관 바로가기</p></div>
+            <div class="brd-name"><a href="" class="titfont">인디고<span class="demi">브랜드관 바로가기</span></a></div>
           </div>
           <div class="pdlist-toptab">
             <div class="pdlist-toptab01">총 <span class="numfontB">140</span>개</div>
@@ -55,9 +58,6 @@
                 <option value="04">낮은 가격순</option>
                 <option value="05">높은 가격순</option>
               </select>
-            </div>
-            <div class="pdlist-toptab03">
-              <button type="button" class=""><img src="../img/view_icon.svg" style="width:20px;"></button>
             </div>
           </div>
           <div class="pdconlist">
@@ -143,11 +143,11 @@
             <span class="pg-prev-end"><a href="#"></a></span>
             <span class="pg-prev"><a href="#"></a></span>
             <span class="page_number">
-              <a href="#" class="page_now numfontR">1</a>
-              <a href="#" class="numfontR">2</a>
-              <a href="#" class="numfontR">3</a>
-              <a href="#" class="numfontR">4</a>
-              <a href="#" class="numfontR">5</a>
+              <a href="#" class="page_now basic">1</a>
+              <a href="#" class="basic">2</a>
+              <a href="#" class="basic">3</a>
+              <a href="#" class="basic">4</a>
+              <a href="#" class="basic">5</a>
             </span>
             <span class="pg-next-end"><a href="#"></a></span>
             <span class="pg-next"><a href="#"></a></span>

@@ -1,7 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-/*  font-family: 'Arita'!important;*/
 /* base */
 html{ min-width:320px; }
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, input, textarea, p, blockquote, th, td, textfield, select{
@@ -39,12 +38,12 @@ input:focus { outline: none; }
     font-style: normal;
     font-weight: normal;
     src: local('notokr regular'), local('notokr-regular');
-	src: url(../font/notokr-regular.eot);
-	src: url(../font/notokr-regular.eot?#iefix) format('embedded-opentype'),
-	     url(../font/notokr-regular.woff2) format('woff2'),
-         url(../font/notokr-regular.woff) format('woff'),
-		 url(../font/notokr-regular.ttf) format('truetype'),
-         url(../font/notokr-regular.otf) format('opentype');
+    src: url(../font/notokr-regular.eot);
+    src: url(../font/notokr-regular.eot?#iefix) format('embedded-opentype'),
+    url(../font/notokr-regular.woff2) format('woff2'),
+    url(../font/notokr-regular.woff) format('woff'),
+    url(../font/notokr-regular.ttf) format('truetype'),
+    url(../font/notokr-regular.otf) format('opentype');
 }
 @font-face {
     font-family: 'Ntdl';
@@ -70,8 +69,6 @@ input:focus { outline: none; }
 		 url(../font/notokr-medium.ttf) format('truetype'),
          url(../font/notokr-medium.otf) format('opentype');
 }
-
-
 @font-face {
     font-family: 'LatoB';
     font-style: normal;
@@ -94,7 +91,6 @@ input:focus { outline: none; }
          url(../font/Lato-Regular.woff) format('woff'),
 		 url(../font/Lato-Regular.ttf) format('truetype');
 }
-
 @font-face { font-family: 'GmarketSansBold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff'); font-weight: normal; font-style: normal; }
 
 
