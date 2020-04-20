@@ -408,7 +408,7 @@ section { width:100%; overflow:hidden; }
 .orderdetail-pay dl.main-price { padding-top:6px;}
 .orderdetail-pay dl.main-price dt, .orderdetail-pay dl.main-price dd { font-size:15px; }
 .order-state-btn { width:100%; padding-top:8px; overflow:hidden }
-.order-state-btn a { display:inline-block; width:49.3%; margin-right:0.7%; text-align:center; padding:6px 0; border:#e0e0e0 solid 1px; color:#888; }
+.order-state-btn a { display:inline-block; width:49.3%; margin-right:0.7%; text-align:center; padding:6px 0; border:#e0e0e0 solid 1px; color:#888; border-radius:2px; }
 
 /*login,join*/
 #loginwrap, #joinwrap { width:100%; min-height:100vh; padding:0 30px; background:#f7f7f7; overflow:hidden; position:relative; }
