@@ -13,16 +13,26 @@
 
     <style>
     .wishlistbox { padding:15px 20px; background:#fff; }
-    .wlbox { position:relative; overflow:hidden; }
-    .wlbox-sel { position:absolute; display:block; top:20px; left:0; }
+    .wishlistbox-tit { font-size:16px; padding-bottom:10px; }
+    .wlbox { position:relative; overflow:hidden; margin-top:15px; }
+    .wlbox-f { margin-top:0; }
+    .wlbox-sel { position:absolute; display:block; top:18px; left:0; }
     .wlbox-sel input[type="checkbox"] { padding:0; margin:0; width:0; opacity:0; }
     .wlbox-sel label { display:block; width:18px; height:18px; line-height:1.8; background:url(../img/c_check_off.svg) no-repeat left top; background-size:17px 17px;  }
     .wlbox-sel input[type="checkbox"]:checked + label { background:url(../img/c_check_on2.svg) no-repeat left top; background-size:17px 17px }
 
     .wlbox-thumb { position:absolute; top:0; left:17px; width:80px; height:80px; }
     .wlbox-thumb img { width:100%; }
-    .wlbox-detail { padding-left:100px; height:80px; }
-    .wlbox-detail h5 { font-size:14px; display:block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .wlbox-detail { padding-left:100px; }
+    .wlbox-detail h5 { padding:0 20px 6px 0; position:relative; font-size:15px; display:block; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .wlbox-detail h5 > span { display:block; padding-bottom:3px; font-size:12px; color:#888; font-family: 'NtR', Sans-serif; }
+    .wlbox-detail h5 > a { display:block; width:13px; height:13px; position:absolute; top:0; right:0; opacity:.7; }
+    .wlbox-detail a img { width:13px; }
+    .wlbox-detail p.num { font-size:12px; color:#666; }
+    .wlbox-detail p.price { padding-top:5px; }
+    .aft-price { font-size:14px; }
+    .aft-price em { font-size:16px; }
+    .bfr-price { color:#999; text-decoration:line-through; }
     </style>
   </head>
 
@@ -48,7 +58,7 @@
         </div>
 
         <div class="bg-container">
-          <div class="cart-ntc">
+          <div class="etc-ntc cart-ntc">
             <ul>
               <li>
                 자주 구매하시는 상품이나, 관심있는 상품을 등록해 주시면 쉽고,
@@ -64,28 +74,43 @@
 
           <!---->
           <div class="page-tab00 wishlistbox">
-            <p class="">전체 <em class="numfontB bfc">22</em></p>
-            <div class="wlbox">
-              <span class="wlbox-sel"
-                ><input type="checkbox" id="wl-sel01"/><label
-                  for="wl-sel01"
-                ></label
-              ></span>
+            <p class="wishlistbox-tit">전체 <em class="numfontB bfc">22</em></p>
+            <div class="wlbox wlbox-f">
+              <span class="wlbox-sel"><input type="checkbox" id="wl-sel01"/><label for="wl-sel01"></label></span>
               <div class="wlbox-thumb">
                 <img src="../img/product/thumb/8.jpg" alt="" />
               </div>
               <div class="wlbox-detail">
                 <h5 class="titfont">
-                  <p>라인 프렌즈</p>
+                  <span>라인 프렌즈</span>
                   라인프렌즈 스트랩보틀삭스세트_샐리(YP3058)
+                  <a class=""><img src="../img/delicon.svg"></a>
                 </h5>
-                <p>상품번호:<em class="numfontR">27729</em></p>
-                <p>
-                  <span class=""><em class="numfontB">12,500</em>원</span
-                  ><span class=""><em class="numfontB">8,125</em>원</span>
+                <p class="num">상품번호:<em class="numfontR"> 27729</em></p>
+                <p class="price">
+                  <span class="aft-price"><em class="numfontB">12,500</em>원</span>
+                  <span class="bfr-price"><em class="numfontB">8,125</em>원</span>
                 </p>
               </div>
-            </div>
+            </div><!--wlbox-->
+            <div class="wlbox">
+              <span class="wlbox-sel"><input type="checkbox" id="wl-sel02"/><label for="wl-sel02"></label></span>
+              <div class="wlbox-thumb">
+                <img src="../img/product/thumb/8.jpg" alt="" />
+              </div>
+              <div class="wlbox-detail">
+                <h5 class="titfont">
+                  <span>라인 프렌즈</span>
+                  라인프렌즈 스트랩보틀삭스세트_샐리(YP3058)
+                  <a class=""><img src="../img/delicon.svg"></a>
+                </h5>
+                <p class="num">상품번호:<em class="numfontR"> 27729</em></p>
+                <p class="price">
+                  <span class="aft-price"><em class="numfontB">12,500</em>원</span>
+                  <span class="bfr-price"><em class="numfontB">8,125</em>원</span>
+                </p>
+              </div>
+            </div><!--wlbox-->
           </div>
           <div class="page-tab01 wishlistbox" style="display:none;"></div>
         </div>
