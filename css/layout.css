@@ -535,6 +535,8 @@ section { width:100%; overflow:hidden; }
 .mp-top-cash .first dt { font-size:16px; }
 .mp-top-cash .first dd { background:none; padding-right:0; text-align:right; }
 .mp-top-cash .first dd em { color:#2537ad; font-size:22px; margin-right:2px; }
+.mp-top-cash .first dd .total-b-price { font-size:13px; padding-top:3px; }
+.mp-top-cash .first dd .total-b-price span { margin-left:2px; }
 .mp-tit { position:relative; padding:0 20px; font-size:17px; font-family:'NtdM', Sans-serif; font-weight:normal; }
 .mp-tit .orderdetail-gobtn { top:0; right:20px; }
 .mp-cate { width:100%; overflow:hidden; padding-top:20px; background:#fff; }
