@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device=width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+  <title>합리적인 도매, 천유닷컴</title>
+  <link rel="stylesheet" type="text/css" href="../css/base.css">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/swiper.min.css">
+  <script src="../js/jquery-1.11.0.min.js"></script>
+  <script src="../js/modernizr.custom.js"></script>
+  <script src="../js/gnb.js"></script>
+
+  <style>
+    .plantop-tab { position:relative; width:100%; background:#2736af; padding:15px 20px; }
+    .plantop-tab span a { display:inline-block; width:50%; text-align:center; font-size:14px; color:#9ba5f4; }
+    .plantop-tab span a.tabline { border-right:#3444bf solid 1px; } 
+    .plantop-tab span a.selected, .plantop-tab span a:active { color:#fff; }
+    .plan02 { position:relative; padding:15px 0; }
+    .plan-alltime-tit { padding:25px 0 20px 20px; font-size:18x; }
+    .plan-alltime ul li p { padding:10px 0 0 4px; font-size:14px; }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <div id="hdwrap">
+        <div class="h_header">
+          <h1 class="logo"><img src="../img/common/top_logo.svg"></h1>
+          <div class="sch">
+            <div class="t-sch">
+              <span class="in-sch">
+                <input type="text" placeholder="찾으시는 상품명 또는 상품번호"><button class="keywordbtn"><img
+                    src="../img/sch_icon.svg" alt="검색"></button>
+              </span>
+              <!--<span class="cart"><img src="../img/qr_img.jpg" alt="qrcode"></span>-->
+            </div>
+          </div>
+          <div class="main-gnb">
+            <ul class="bot-gnb">
+              <li><a href="#">홈</a></li>
+              <li><a href="#">베스트</a></li>
+              <li class="selected"><a href="#">기획전</a></li>
+              <li><a href="#">브랜드</a></li>
+              <li><a href="#">NEW</a></li>
+              <li><a href="#">최저가도전</a></li>
+              <li><a href="#">땡처리</a></li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="active_header">
+          <div class="main-gnb">
+            <ul class="bot-gnb">
+              <li><a href="#">홈</a></li>
+              <li><a href="#">베스트</a></li>
+              <li class="selected"><a href="#">기획전</a></li>
+              <li><a href="#">브랜드</a></li>
+              <li><a href="#">NEW</a></li>
+              <li><a href="#">최저가도전</a></li>
+              <li><a href="#">땡처리</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="plantop-tab">
+          <span><a class="tabline selected">이달의 기획전</a><a>5월의 기획전</a></span>
+        </div>
+        <div class="plan02 plan">
+          <div class="planbox">
+            <div class="slide-tit">
+              <p class="demi">#정리정돈_끝판대장 #수납왕 #정리왕</p>
+            </div>
+            <img src="../img/plan_bnr01.jpg" style="width:100%;">
+          </div>
+          <div class="planbox">
+            <div class="slide-tit">
+              <p class="demi">#다꾸왕_단골 #스티커모음전</p>
+            </div>
+            <img src="../img/plan_bnr02.jpg" style="width:100%;">
+          </div>
+          <div class="planbox">
+            <div class="slide-tit">
+              <p class="demi">#정리정돈_끝판대장 #수납왕 #정리왕</p>
+            </div>
+            <img src="../img/plan_bnr03.jpg" style="width:100%;">
+          </div>
+        </div>
+        <!--palnbox-->
+        <!---->
+        <div class="plan-alltime plan03-swiper">
+          <h3 class="plan-alltime-tit">상시 기획전</h3>
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="">
+                <img src="../img/aw_plan01.jpg">
+                <p class="demi">귀여운 라인프렌즈 모음전</p>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="">
+                <img src="../img/aw_plan01.jpg">
+                <p class="demi">미세먼지 황사마스크 기획전</p>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="">
+                <img src="../img/aw_plan02.jpg">
+                <p class="demi">여행용품 모음전</p>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="">
+                <img src="../img/aw_plan01.jpg">
+                <p class="demi">귀여운 라인프렌즈 모음전</p>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="">
+                <img src="../img/aw_plan01.jpg">
+                <p class="demi">미세먼지 황사마스크 기획전</p>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="">
+                <img src="../img/aw_plan02.jpg">
+                <p class="demi">여행용품 모음전</p>
+              </a>
+            </li>
+          </ul>
+          <div class="swiper-scrollbar"></div>
+        </div>
+
+        <script src="../js/swiper.min.js"></script>
+        <script>
+          var swiper = new Swiper('.plan03-swiper', {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            autoplay: {
+              delay: 2000,
+            },
+            centeredSlides: false,
+            scrollbar: {
+              el: '.swiper-scrollbar',
+              hide: false,
+            },
+          });
+        </script>
+      </div>
+    </section>
+
+
+  </div>
+</body>
+
+</html>

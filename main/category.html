@@ -8,24 +8,21 @@
 <link rel="stylesheet" type="text/css" href="../css/base.css">
 <link rel="stylesheet" type="text/css" href="../css/layout.css">
 <style>
-.page-close { position:absolute; top:12px; right:18px; }
+.page-close { position:absolute; top:14px; right:18px; }
 .page-close img { width:18px; }
-.ct-top { overflow:hidden; background:#fff; }
-.ct-top h3 {  padding:20px; }
-.ct-top h3 > span { font-size:18px; padding-left:20px; background:url(../img/lock.svg) no-repeat left center; background-size:16px 16px; }
-.ct-top h3 > p { padding-top:15px; }
-.ct-top h3 > p > a { display:inline-block; width:49.5%; margin-right:0.5%; text-align:center; border:#ddd solid 1px; padding:10px 0; color:#777; }
-.ct-top > p { overflow:hidden; background:#2736af; padding:18px 0; }
-.ct-top > p a { display:inline-block; position:relative; width:33.33%; text-align:center; color:#eee; font-size:12px; }
-.ct-top > p a:after { display:block; position:absolute; width:1px; height:30px; top:3px; right:0; background:rgba(255, 255, 255, 0.15); content:""; }
-.ct-top > p a img { display:block; width:15px; margin:0 auto 6px auto; }
+.ct-top { position:relative; overflow:hidden;  background:#2736af; }
+.ct-top h3 {  padding:20px; color:#fff; }
+.ct-top h3 > span { font-size:18px; padding-left:20px; background:url(../img/ct_lock.svg) no-repeat left center; background-size:16px 16px; }
+.ct-top .ct-top-btn { position:absolute; top:20px; right:20px; }
+.ct-top .ct-top-btn a { display:inline-block; color:#fff; margin-left:3px; border:#e0e0e0 solid 1px; font-size:12px; padding:0 8px; line-height:24px; border-radius:13px; }
 
 .ct-menu { overflow:hidden; background:#fff; margin-top:10px; }
 .ct-menu .ct-menu-list01 li { float:left; width:50%; border-bottom:#eee solid 1px; }
-.ct-menu .ct-menu-list01 li a { display:block; padding:18px 20px; font-size:15px; }
+.ct-menu .ct-menu-list01 li a { display:block; padding:18px 20px; font-size:14px; }
 .ct-menu .ct-menu-list01 li:nth-child(2n-1) { border-right:#eee solid 1px; }
 .ct-menu .ct-menu-list01 li:nth-child(9) { border-bottom:0; }
-.ct-menu .ct-menu-list01 li a img { width:15px; margin:1px 5px 0 0; display:inline-block; vertical-align:top; }
+.ct-menu .ct-menu-list01 li a img { width:20px; margin:0 7px 0 0; display:inline-block; vertical-align:top; }
+.ct-menulist ul li a { font-family: 'NtR', Sans-serif; }
 </style>
 </head>
 
@@ -42,29 +39,28 @@
     <section>
       <div class="bg-container">
         <div class="ct-top">
-          <h3><span class="titfont">로그인을 해주세요</span><p><a class="" href="">회원가입</a><a class="" href="">로그인</a></p></h3>
-          <p><a href=""><img src="../img/ct-cart.svg">주문조회</a><a href=""><img src="../img/ct-cart.svg">장바구니</a><a href=""><img src="../img/ct-my.svg">마이페이지</a></p>
+          <h3><span>로그인을 해주세요</span></h3>
+          <span class="ct-top-btn"><a class="basic" href="">로그인</a><a class="basic" href="">회원가입</a></span>
         </div>
         <div class="ct-menu">
           <ul class="ct-menu-list01">
-            <li><a>디자인문구</a></li>
-            <li><a>오피스용품</a></li>
-            <li><a>패션잡화</a></li>
-            <li><a>캠핑/여행</a></li>
-            <li><a>홈데코</a></li>
-            <li><a>디지털/전산/핸드폰</a></li>
-            <li><a>키친/유아식기</a></li>
-            <li><a>완구/인형/취미</a></li>
-            <li><a>필기구/학습</a></li>
+            <li><a class="titfont"><img src="../img/ct01.svg">디자인문구</a></li>
+            <li><a class="titfont"><img src="../img/ct02.svg">오피스용품</a></li>
+            <li><a class="titfont"><img src="../img/ct03.svg">패션잡화</a></li>
+            <li><a class="titfont"><img src="../img/ct04.svg">캠핑/여행</a></li>
+            <li><a class="titfont"><img src="../img/ct05.svg">홈데코</a></li>
+            <li><a class="titfont"><img src="../img/ct06.svg">디지털/전산/핸드폰</a></li>
+            <li><a class="titfont"><img src="../img/ct07.svg">키친/유아식기</a></li>
+            <li><a class="titfont"><img src="../img/ct08.svg">완구/인형/취미</a></li>
+            <li><a class="titfont"><img src="../img/ct09.svg">필기구/학습</a></li>
           </ul>
         </div>
-        <div class="ct-menu">
-          <ul class="">
-            <li><a>자주묻는질문</a></li>
-            <li><a></a></li>
-            <li><a></a></li>
-            <li><a></a></li>
-            <li><a></a></li>
+        <div class="ct-menulist mp-menulist">
+          <ul>
+            <li><a href=""><img src="../img/mpicon7.svg" alt="장바구니">장바구니</a></li>
+            <li><a href=""><img src="../img/mpicon01.svg" alt="FAQ"">자주묻는질문</a></li>
+            <li><a href=""><img src="../img/mpicon02.svg" alt="문의신청">문의/신청</a></li>
+            <li><a href=""><img src="../img/mpicon05.svg" alt="상품권구매">상품권구매</a></li>
           </ul>
         </div>
       </div>
