@@ -33,6 +33,7 @@ header {}
 .sub-top a { display:block; position:absolute; }
 .sub-top .backicon { top:14px; left:15px; }
 .carticon { top:10px; right:20px; width:30px; height:26px; background:url(../img/cart.svg) no-repeat; background-size:30px 26px;  }
+.carticon em { display:block; position:absolute; width:18px; height:18px; background:#1140d6; border-radius:50%; top:-4px; right:-5px; color:#fff; font-size:10px; text-align:center; line-height:19px; }
 
 /*main*/
 section { width:100%; overflow:hidden; }
