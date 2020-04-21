@@ -715,6 +715,8 @@ section { width:100%; overflow:hidden; }
 .selectckd input[type="checkbox"]:checked + label { background:url(../img/opt_onn.png) no-repeat; background-size:20px 20px; }
 /*btn*/
 .common-next-btn { width:100%; height:46px; background:#1d34aa; border-radius:3px; text-align:center; color:#fff; font-size:15px; }
+.topbtn { position:absolute; display:block; width:40px; height:40px; bottom:65px; right:15px; }
+.topbtn img { width:40px; }
 /*color*/
 .rd {color:#ff0000 !important; }
 .bfc { color:#223d92 !important; }
