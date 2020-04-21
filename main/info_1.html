@@ -7,6 +7,7 @@
 <title>합리적인 도매, 천유닷컴</title>
 <link rel="stylesheet" type="text/css" href="../css/base.css">
 <link rel="stylesheet" type="text/css" href="../css/layout.css">
+<link rel="stylesheet" href="../css/swiper.min.css">
 <script src="../js/jquery-1.11.0.min.js"></script>
 
 <style>
@@ -14,6 +15,27 @@
 .pdinfo-top h3 .tag em { padding:2px 6px; border-radius:12px; }
 .pdinfo-top h3 .tag em.tag-new { border:#00ce5c solid 1px; }
 .pdinfo-top h3 .tag em.tag-op { border:#009cff solid 1px; }
+
+.contents-box h5.active { background:#f9f9f9; }
+.contents-box h5.active span:after { border-width:1px 0 0 1px; top:7px; transform: rotate(45deg); 
+-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg); }
+.contents-box .contents-open span { display:block; position:relative; }
+.contents-box .contents-open span:after { display:block; content:''; position:absolute; width:8px; height:8px; top:5px; right:0; border:#aaa solid 1px; border-width:1px 1px 0 0; transform: rotate(135deg); -webkit-transform:rotate(135deg);-ms-transform:rotate(135deg);-o-transform:rotate(135deg); }
+
+.pd-connect { border-top:#f5f6fa solid 10px; }
+.pd-connect > h5 { padding:15px; font-size:16px; border-bottom:#eee solid 1px; }
+/*main에 포함된 css*/
+.pd-swiper { width:100%; background:#fff; }
+.pd-swiper .swiper-wrapper { }
+.pd-swiper .swiper-slide { width:180px !important; }
+.pd-swiper .swiper-slide img { width:100%;}
+.pd-swiper .swiper-slide a.selected, .swiper-slide a:hover { }
+.pd-swiper .swiper-slide {
+      /* Center slide text vertically */
+	  float:left; padding:0;
+      -webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;
+      -webkit-box-align: center; -ms-flex-align: center;-webkit-align-items: center; align-items: center;  }
+      
 </style>
 </head>
 
@@ -94,7 +116,7 @@
           <div class="pdinfobox-content">
             <img src="../img/88888.jpg" style="width:100%;">
             <div class="contents-box-f contents-box">
-              <h5 class="contents-open titfont">상품정보 제공고시</h5><!--박스오픈시 "contents-open" background:#f9f9f9;-->
+              <h5 class="active contents-open titfont"><span>상품정보 제공고시</span></h5>
               <div class="contents-con" style="display:block;">
                 <dl>
                   <dt class="titfont">품명 및 모델명</dt>
@@ -146,7 +168,7 @@
               <!--배송교환환불-->
           <div class="pdinfobox-content">
             <div class="contents-box-f contents-box">
-              <h5 class="contents-open titfont">배송정보</h5>
+              <h5 class="contents-open titfont"><span>배송정보</span></h5>
               <div class="contents-con">
                 <div class="first">
                   <span class="contents-con-tit titfont">배송일정</span>
@@ -172,7 +194,7 @@
               </div>
             </div>
             <div class="contents-box">
-              <h5 class="contents-open titfont">반품/환불/교환</h5>
+              <h5 class="contents-open titfont"><span>반품/환불/교환</span></h5>
               <div class="contents-con">
                 <div class="first">
                   <span class="contents-con-tit titfont">안내</span>
@@ -190,7 +212,7 @@
               </div>
             </div>
             <div class="contents-box">
-              <h5 class="contents-open titfont">고객센터</h5>
+              <h5 class="contents-open titfont"><span>고객센터</span></h5>
               <div class="contents-con">
                 <div class="first">
                   <span class="contents-con-tit titfont">안내</span>
@@ -202,6 +224,71 @@
                     </ul>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pd-connect">
+          <h5 class="titfont">동일 브랜드 인기상품</h5>
+          <div class="pdlist">
+            <div class="pd-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div>
+                    <a href="">
+                      <div class="pdlist-thumb"><img src="../img/temp/bs01.jpg" alt=""></div>
+                    </a>
+                    <div class="pdlist-txt">
+                      <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                      <div class="pdprice">
+                        <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                        <p class="pdprice-pr">
+                          <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                          <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--swiper-slide-->
+                <div class="swiper-slide">
+                  <div>
+                    <a href="">
+                      <div class="pdlist-thumb"><img src="../img/temp/bs05.jpg" alt=""></div>
+                    </a>
+                    <div class="pdlist-txt">
+                      <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                      <div class="pdprice">
+                        <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                        <p class="pdprice-pr">
+                          <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                          <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <!--swiper-slide-->
+                <div class="swiper-slide">
+                  <div>
+                    <a href="">
+                      <div class="pdlist-thumb"><img src="../img/temp/bs03.jpg" alt=""></div>
+                    </a>
+                    <div class="pdlist-txt">
+                      <h5 class="pdtit"><span class="brd">[마패드]</span>가위 제노핏 18cm 랜덤</h5>
+                      <div class="pdprice">
+                        <p class="pdprice-dc numfontB"><em class="basic">최대할인</em>40<em class="small">%</em></span></p>
+                        <p class="pdprice-pr">
+                          <span class="pdprice-pr01"><em class="numfontR">25,000</em>원</span>
+                          <span class="pdprice-pr02"><strong class="numfontB">15,700</strong><em>원</em></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--swiper-slide-->
               </div>
             </div>
           </div>
